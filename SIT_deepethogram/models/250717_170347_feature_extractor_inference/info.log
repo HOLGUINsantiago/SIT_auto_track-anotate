@@ -1,0 +1,220 @@
+[2025-07-17 17:03:47,823] INFO [__main__.feature_extractor_inference:473] args: C:\Users\TeamGranon\anaconda3\envs\deg_social\lib\site-packages\deepethogram\feature_extractor\inference.py project.path=D:\SIT_auto\SIT_deepethogram inference.overwrite=True feature_extractor.weights=D:\SIT_auto\SIT_deepethogram\models\250717_000000_TS1_FE_model\lightning_checkpoints\epoch=0-step=999.ckpt flow_generator.weights=D:\SIT_auto\SIT_deepethogram\models\250717_000000_TS1_FG_model\lightning_checkpoints\epoch=1-step=1999.ckpt inference.directory_list=[D:\SIT_auto\SIT_deepethogram\DATA\SIT10-TKX-79-1-2025-01-1509-48-05,D:\SIT_auto\SIT_deepethogram\DATA\SIT12-69B-79-5-2025-01-1510-28-02,D:\SIT_auto\SIT_deepethogram\DATA\SIT18-O8U-80-4-2025-01-1512-38-49,D:\SIT_auto\SIT_deepethogram\DATA\SIT21-LHD-77-4-2025-01-2009-02-17,D:\SIT_auto\SIT_deepethogram\DATA\SIT23-6BU-78-2-2025-01-2009-41-25,D:\SIT_auto\SIT_deepethogram\DATA\SIT28-O8U-80-2-2025-04-1711-17-32,D:\SIT_auto\SIT_deepethogram\DATA\SIT30-AV8-79-4-2025-04-1711-55-15,D:\SIT_auto\SIT_deepethogram\DATA\SIT32-RT7-80-3-2025-04-1809-17-34,D:\SIT_auto\SIT_deepethogram\DATA\SIT34-EYM-80-1-2025-04-1809-55-14,D:\SIT_auto\SIT_deepethogram\DATA\SIT36-YDH-79-4-2025-04-1810-31-24,D:\SIT_auto\SIT_deepethogram\DATA\SIT38-YD5-79-2-2025-04-1811-08-56,D:\SIT_auto\SIT_deepethogram\DATA\SIT40-K2K-79-5-2025-04-1811-44-42,D:\SIT_auto\SIT_deepethogram\DATA\SIT42-9NO-80-4-2025-04-1812-21-00]
+[2025-07-17 17:03:47,823] INFO [__main__.feature_extractor_inference:475] configuration used in inference: 
+[2025-07-17 17:03:47,823] INFO [__main__.feature_extractor_inference:476] split:
+  reload: true
+  file: null
+  train_val_test:
+  - 0.8
+  - 0.2
+  - 0.0
+compute:
+  fp16: false
+  num_workers: 3
+  batch_size: 8
+  min_batch_size: 8
+  max_batch_size: 512
+  distributed: false
+  gpu_id: 0
+  dali: false
+  metrics_workers: 0
+reload:
+  overwrite_cfg: false
+  latest: false
+notes: null
+log:
+  level: info
+augs:
+  brightness: 0.25
+  contrast: 0.1
+  hue: 0.1
+  saturation: 0.1
+  color_p: 0.5
+  grayscale: 0.5
+  crop_size: null
+  resize:
+  - 224
+  - 224
+  dali: false
+  random_resize: false
+  pad: null
+  LR: 0.5
+  UD: 0.0
+  degrees: 10
+  normalization:
+    'N': 146986948000
+    mean:
+    - 0.4164462071554323
+    - 0.3852139020703655
+    - 0.3575580967434715
+    std:
+    - 0.19058749047566914
+    - 0.19298021732548767
+    - 0.19604022740886515
+feature_extractor:
+  arch: resnet18
+  fusion: average
+  sampler: null
+  final_bn: false
+  sampling_ratio: null
+  final_activation: sigmoid
+  dropout_p: 0.25
+  n_flows: 10
+  n_rgb: 1
+  curriculum: false
+  inputs: both
+  weights: D:\SIT_auto\SIT_deepethogram\models\250717_000000_TS1_FE_model\lightning_checkpoints\epoch=0-step=999.ckpt
+train:
+  steps_per_epoch:
+    train: 1000
+    val: 200
+    test: 20
+  num_epochs: 10
+  loss_weight_exp: 1.0
+flow_generator:
+  type: flow_generator
+  flow_loss: MotionNet
+  flow_max: 10
+  input_images: 11
+  flow_sparsity: false
+  smooth_weight_multiplier: 1.0
+  sparsity_weight: 0.0
+  loss: MotionNet
+  max: 5
+  n_rgb: 11
+  arch: TinyMotionNet
+  weights: D:\SIT_auto\SIT_deepethogram\models\250717_000000_TS1_FG_model\lightning_checkpoints\epoch=1-step=1999.ckpt
+inference:
+  directory_list:
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT10-TKX-79-1-2025-01-1509-48-05
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT12-69B-79-5-2025-01-1510-28-02
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT18-O8U-80-4-2025-01-1512-38-49
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT21-LHD-77-4-2025-01-2009-02-17
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT23-6BU-78-2-2025-01-2009-41-25
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT28-O8U-80-2-2025-04-1711-17-32
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT30-AV8-79-4-2025-04-1711-55-15
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT32-RT7-80-3-2025-04-1809-17-34
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT34-EYM-80-1-2025-04-1809-55-14
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT36-YDH-79-4-2025-04-1810-31-24
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT38-YD5-79-2-2025-04-1811-08-56
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT40-K2K-79-5-2025-04-1811-44-42
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT42-9NO-80-4-2025-04-1812-21-00
+  ignore_error: true
+  overwrite: true
+  use_loaded_model_cfg: true
+postprocessor:
+  type: min_bout_per_behavior
+  min_bout_length: 1
+cmap: deepethogram
+control_arrow_jump: 31
+label_view_width: 31
+prediction_opacity: 0.2
+project:
+  class_names:
+  - background
+  - Contactbyhost
+  - Contactbyvisitor
+  - Followbyhost
+  - Followbyvisitor
+  - Pawcontrol(host)
+  - Rearing
+  - Tailrattling
+  - Grooming
+  config_file: project_config.yaml
+  data_path: D:\SIT_auto\SIT_deepethogram\DATA
+  labeler: null
+  model_path: D:\SIT_auto\SIT_deepethogram\models
+  name: SIT
+  path: D:\SIT_auto\SIT_deepethogram
+  pretrained_path: D:\SIT_auto\SIT_deepethogram\models\pretrained_models
+run:
+  type: inference
+  model: feature_extractor
+  dir: D:\SIT_auto\SIT_deepethogram\models\250717_170347_feature_extractor_inference
+sequence:
+  filter_length: 15
+unlabeled_alpha: 0.1
+vertical_arrow_jump: 3
+
+[2025-07-17 17:03:47,840] INFO [__main__.feature_extractor_inference:481] Latent name used in HDF5 file: resnet18
+[2025-07-17 17:03:47,840] INFO [deepethogram.data.augs.get_gpu_transforms:246] GPU transforms: {'train': Sequential(
+  (0): ToFloat()
+  (1): VideoSequential(
+    (RandomHorizontalFlip_0): RandomHorizontalFlip(p=0.5, p_batch=1.0, same_on_batch=False)
+    (RandomRotation_1): RandomRotation(degrees=10, p=0.5, p_batch=1.0, same_on_batch=False, resample=bilinear, align_corners=True)
+    (ColorJitter_2): ColorJitter(brightness=0.25, contrast=0.1, saturation=0.1, hue=0.1, p=0.5, p_batch=1.0, same_on_batch=False)
+    (RandomGrayscale_3): RandomGrayscale(p=0.5, p_batch=1.0, same_on_batch=False)
+  )
+  (2): NormalizeVideo()
+  (3): StackClipInChannels()
+), 'val': Sequential(
+  (0): ToFloat()
+  (1): NormalizeVideo()
+  (2): StackClipInChannels()
+), 'test': Sequential(
+  (0): ToFloat()
+  (1): NormalizeVideo()
+  (2): StackClipInChannels()
+), 'denormalize': Sequential(
+  (0): UnstackClip()
+  (1): DenormalizeVideo()
+)}
+[2025-07-17 17:03:47,840] INFO [__main__.feature_extractor_inference:515] gpu_transform: Sequential(
+  (0): ToFloat()
+  (1): NormalizeVideo()
+  (2): StackClipInChannels()
+)
+[2025-07-17 17:03:47,918] INFO [deepethogram.projects.get_weightfile_from_cfg:1079] loading specified weights: D:\SIT_auto\SIT_deepethogram\models\250717_000000_TS1_FE_model\lightning_checkpoints\epoch=0-step=999.ckpt
+[2025-07-17 17:03:48,059] INFO [deepethogram.projects.get_weightfile_from_cfg:1079] loading specified weights: D:\SIT_auto\SIT_deepethogram\models\250717_000000_TS1_FE_model\lightning_checkpoints\epoch=0-step=999.ckpt
+[2025-07-17 17:03:48,059] INFO [deepethogram.feature_extractor.train.build_model_from_cfg:220] feature extractor weightfile: D:\SIT_auto\SIT_deepethogram\models\250717_000000_TS1_FE_model\lightning_checkpoints\epoch=0-step=999.ckpt
+[2025-07-17 17:03:48,123] INFO [deepethogram.utils.load_feature_extractor_components:630] loading component spatial from file D:\SIT_auto\SIT_deepethogram\models\250717_000000_TS1_FE_model\lightning_checkpoints\epoch=0-step=999.ckpt
+[2025-07-17 17:03:48,246] INFO [deepethogram.utils.load_feature_extractor_components:630] loading component flow from file D:\SIT_auto\SIT_deepethogram\models\250717_000000_TS1_FE_model\lightning_checkpoints\epoch=0-step=999.ckpt
+[2025-07-17 17:03:48,417] INFO [deepethogram.projects.get_weightfile_from_cfg:1079] loading specified weights: D:\SIT_auto\SIT_deepethogram\models\250717_000000_TS1_FG_model\lightning_checkpoints\epoch=1-step=1999.ckpt
+[2025-07-17 17:03:48,417] INFO [deepethogram.utils.load_state:341] loading from checkpoint file D:\SIT_auto\SIT_deepethogram\models\250717_000000_TS1_FG_model\lightning_checkpoints\epoch=1-step=1999.ckpt...
+[2025-07-17 17:03:48,432] INFO [deepethogram.utils.load_feature_extractor_components:630] loading component fusion from file D:\SIT_auto\SIT_deepethogram\models\250717_000000_TS1_FE_model\lightning_checkpoints\epoch=0-step=999.ckpt
+[2025-07-17 17:03:48,495] INFO [__main__.feature_extractor_inference:545] best epoch from loaded file: 0
+[2025-07-17 17:03:48,496] INFO [__main__.feature_extractor_inference:552] thresholds: [0.10059246 0.5        0.5226608  0.70857186 0.5        0.5
+ 0.82916281 0.5        0.5       ]
+[2025-07-17 17:03:48,799] INFO [__main__.extract:383] inference batch size: 8
+[2025-07-17 17:03:56,754] INFO [__main__.print_debug_statement:128] images shape: torch.Size([8, 33, 224, 224])
+[2025-07-17 17:03:56,754] INFO [__main__.print_debug_statement:129] logits shape: torch.Size([8, 9])
+[2025-07-17 17:03:56,754] INFO [__main__.print_debug_statement:130] spatial_features shape: torch.Size([8, 512])
+[2025-07-17 17:03:56,754] INFO [__main__.print_debug_statement:131] flow_features shape: torch.Size([8, 512])
+[2025-07-17 17:03:56,754] INFO [__main__.print_debug_statement:133] spatial: min 0.0 mean 0.9561761617660522 max 5.695158004760742 shape torch.Size([8, 512])
+[2025-07-17 17:03:56,754] INFO [__main__.print_debug_statement:135] flow   : min 0.0 mean 1.2963134050369263 max 21.466371536254883 shape torch.Size([8, 512])
+[2025-07-17 17:03:56,769] INFO [__main__.print_debug_statement:144] channel min:  tensor([-0.0040, -0.0047, -0.0035, -0.0040, -0.0047, -0.0035, -0.0040, -0.0047,
+        -0.0035, -0.0040, -0.0047, -0.0035, -0.0040, -0.0047, -0.0035, -2.1851,
+        -1.9961, -1.8239, -2.1851, -1.9961, -1.8239, -2.1851, -1.9961, -1.8239,
+        -2.1851, -1.9961, -1.8239, -2.1851, -1.9961, -1.8239, -2.1851, -1.9961,
+        -1.8239], device='cuda:0')
+[2025-07-17 17:03:56,769] INFO [__main__.print_debug_statement:145] channel mean: tensor([-0.0040, -0.0047, -0.0035, -0.0040, -0.0047, -0.0035, -0.0040, -0.0047,
+        -0.0035, -0.0040, -0.0047, -0.0035, -0.0040, -0.0047, -0.0035, -0.5758,
+        -0.3970, -0.3674, -0.5736, -0.3971, -0.3666, -0.5731, -0.3970, -0.3666,
+        -0.5728, -0.3967, -0.3676, -0.5727, -0.3962, -0.3692, -0.5718, -0.3955,
+        -0.3675], device='cuda:0')
+[2025-07-17 17:03:56,773] INFO [__main__.print_debug_statement:146] channel max : tensor([-0.0040, -0.0047, -0.0035, -0.0040, -0.0047, -0.0035, -0.0040, -0.0047,
+        -0.0035, -0.0040, -0.0047, -0.0035, -0.0040, -0.0047, -0.0035,  2.8150,
+         3.1857,  3.2771,  2.8150,  3.1857,  3.2771,  2.8150,  3.1857,  3.2771,
+         2.8150,  3.1857,  3.2771,  2.8150,  3.1857,  3.2771,  2.8150,  3.1857,
+         3.2771], device='cuda:0')
+[2025-07-17 17:03:56,775] INFO [__main__.print_debug_statement:147] channel std : tensor([0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000,
+        0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 1.4347, 1.4272, 1.3107,
+        1.4368, 1.4272, 1.3115, 1.4371, 1.4271, 1.3114, 1.4375, 1.4274, 1.3105,
+        1.4376, 1.4279, 1.3094, 1.4384, 1.4286, 1.3106], device='cuda:0')
+[2025-07-17 17:05:01,695] INFO [__main__.extract:416] probabilities: torch.Size([11901, 9])
+[2025-07-17 17:05:01,695] INFO [__main__.extract:416] logits: torch.Size([11901, 9])
+[2025-07-17 17:05:01,695] INFO [__main__.extract:416] spatial_features: torch.Size([11901, 512])
+[2025-07-17 17:05:01,695] INFO [__main__.extract:416] flow_features: torch.Size([11901, 512])
+[2025-07-17 17:05:01,695] INFO [__main__.extract:416] debug: torch.Size([11901])
+[2025-07-17 17:05:01,776] WARNING [__main__.extract:439] error calculating f1: list index out of range
+[2025-07-17 17:06:48,851] WARNING [__main__.extract:439] error calculating f1: list index out of range
+[2025-07-17 17:08:30,212] WARNING [__main__.extract:439] error calculating f1: list index out of range
+[2025-07-17 17:10:10,166] WARNING [__main__.extract:439] error calculating f1: list index out of range
+[2025-07-17 17:11:48,864] WARNING [__main__.extract:439] error calculating f1: list index out of range
+[2025-07-17 17:12:32,633] WARNING [__main__.extract:439] error calculating f1: list index out of range
+[2025-07-17 17:13:16,191] WARNING [__main__.extract:439] error calculating f1: list index out of range
+[2025-07-17 17:13:59,707] WARNING [__main__.extract:439] error calculating f1: list index out of range
+[2025-07-17 17:14:43,253] WARNING [__main__.extract:439] error calculating f1: list index out of range
+[2025-07-17 17:15:49,888] WARNING [__main__.extract:439] error calculating f1: list index out of range
+[2025-07-17 17:16:33,371] WARNING [__main__.extract:439] error calculating f1: list index out of range
+[2025-07-17 17:17:16,997] WARNING [__main__.extract:439] error calculating f1: list index out of range
+[2025-07-17 17:18:00,430] WARNING [__main__.extract:439] error calculating f1: list index out of range

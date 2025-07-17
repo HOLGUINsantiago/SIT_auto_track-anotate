@@ -1,7 +1,7 @@
 $videos = Get-ChildItem "for_tracking\*" -Include *.mp4, *.mkv
 
 foreach ($video in $videos) {
-    Write-Host "Procesando: $($video.Name)" -ForegroundColor Cyan
+    Write-Host "Processing: $($video.Name)" -ForegroundColor Cyan
 
     sleap-track `
         -m "SLEAP_track\models\250702_114533.centroid.n=765" `

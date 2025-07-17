@@ -1,0 +1,100 @@
+[2025-07-17 17:01:57,412] INFO [deepethogram.gui.main.initialize_project:1021] loaded project configuration: split:
+  reload: true
+  file: null
+  train_val_test:
+  - 0.8
+  - 0.2
+  - 0.0
+compute:
+  fp16: false
+  num_workers: 3
+  batch_size: 8
+  min_batch_size: 8
+  max_batch_size: 512
+  distributed: false
+  gpu_id: 0
+  dali: false
+  metrics_workers: 0
+reload:
+  overwrite_cfg: false
+  latest: false
+notes: null
+log:
+  level: info
+run:
+  type: gui
+  model: null
+  dir: D:\SIT_auto\SIT_deepethogram\gui_logs\250717_170157
+label_view_width: 31
+control_arrow_jump: 31
+vertical_arrow_jump: 3
+cmap: deepethogram
+unlabeled_alpha: 0.1
+prediction_opacity: 0.2
+postprocessor:
+  type: min_bout_per_behavior
+  min_bout_length: 1
+augs:
+  LR: 0.5
+  UD: 0.0
+  brightness: 0.25
+  contrast: 0.1
+  crop_size: null
+  degrees: 10
+  grayscale: 0.5
+  hue: 0.1
+  normalization:
+    'N': 146986948000
+    mean:
+    - 0.4164462071554323
+    - 0.3852139020703655
+    - 0.3575580967434715
+    std:
+    - 0.19058749047566914
+    - 0.19298021732548767
+    - 0.19604022740886515
+  pad: null
+  random_resize: false
+  resize:
+  - 224
+  - 224
+  saturation: 0.1
+project:
+  class_names:
+  - background
+  - Contactbyhost
+  - Contactbyvisitor
+  - Followbyhost
+  - Followbyvisitor
+  - Pawcontrol(host)
+  - Rearing
+  - Tailrattling
+  - Grooming
+  config_file: project_config.yaml
+  data_path: D:\SIT_auto\SIT_deepethogram\DATA
+  labeler: null
+  model_path: D:\SIT_auto\SIT_deepethogram\models
+  name: SIT
+  path: D:\SIT_auto\SIT_deepethogram
+  pretrained_path: D:\SIT_auto\SIT_deepethogram\models\pretrained_models
+sequence:
+  filter_length: 15
+train:
+  loss_weight_exp: 1.0
+
+[2025-07-17 17:01:57,412] INFO [deepethogram.gui.main.initialize_project:1022] cwd: D:\SIT_auto\SIT_deepethogram\gui_logs\250717_170157
+[2025-07-17 17:01:57,471] INFO [deepethogram.gui.main.project_loaded_buttons:175] Number finalized labels: 10
+[2025-07-17 17:01:57,844] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': None, 'output': None, 'rgb': 'D:\\SIT_auto\\SIT_deepethogram\\DATA\\SIT10-TKX-79-1-2025-01-1509-48-05\\SIT10-TKX-79-1-2025-01-1509-48-05.mp4', 'keypoint': None, 'key': 'SIT10-TKX-79-1-2025-01-1509-48-05'}
+[2025-07-17 17:02:57,887] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-17 17:03:46,214] INFO [deepethogram.gui.main.get_selected_models:1136] {'flow_generator': {'no pretrained weights': None, '200221_115158_TinyMotionNet': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200221_115158_TinyMotionNet\\checkpoint.pt', '250717_000000_TS1_FG_model': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250717_000000_TS1_FG_model\\lightning_checkpoints\\epoch=1-step=1999.ckpt'}, 'feature_extractor': {'no pretrained weights': None, '200415_125824_hidden_two_stream_kinetics_degf': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200415_125824_hidden_two_stream_kinetics_degf\\checkpoint.pt', '250717_000000_TS1_FE_model': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250717_000000_TS1_FE_model\\lightning_checkpoints\\epoch=0-step=999.ckpt'}, 'sequence': {'': None}}
+[2025-07-17 17:03:46,214] INFO [deepethogram.gui.main.get_selected_models:1136] {'flow_generator': {'no pretrained weights': None, '200221_115158_TinyMotionNet': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200221_115158_TinyMotionNet\\checkpoint.pt', '250717_000000_TS1_FG_model': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250717_000000_TS1_FG_model\\lightning_checkpoints\\epoch=1-step=1999.ckpt'}, 'feature_extractor': {'no pretrained weights': None, '200415_125824_hidden_two_stream_kinetics_degf': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200415_125824_hidden_two_stream_kinetics_degf\\checkpoint.pt', '250717_000000_TS1_FE_model': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250717_000000_TS1_FE_model\\lightning_checkpoints\\epoch=0-step=999.ckpt'}, 'sequence': {'': None}}
+[2025-07-17 17:03:46,214] INFO [deepethogram.gui.main.featureextractor_infer:452] inference running with args: python -m deepethogram.feature_extractor.inference project.path=D:\SIT_auto\SIT_deepethogram inference.overwrite=True feature_extractor.weights=D:\SIT_auto\SIT_deepethogram\models\250717_000000_TS1_FE_model\lightning_checkpoints\epoch=0-step=999.ckpt flow_generator.weights=D:\SIT_auto\SIT_deepethogram\models\250717_000000_TS1_FG_model\lightning_checkpoints\epoch=1-step=1999.ckpt inference.directory_list=[D:\SIT_auto\SIT_deepethogram\DATA\SIT10-TKX-79-1-2025-01-1509-48-05,D:\SIT_auto\SIT_deepethogram\DATA\SIT12-69B-79-5-2025-01-1510-28-02,D:\SIT_auto\SIT_deepethogram\DATA\SIT18-O8U-80-4-2025-01-1512-38-49,D:\SIT_auto\SIT_deepethogram\DATA\SIT21-LHD-77-4-2025-01-2009-02-17,D:\SIT_auto\SIT_deepethogram\DATA\SIT23-6BU-78-2-2025-01-2009-41-25,D:\SIT_auto\SIT_deepethogram\DATA\SIT28-O8U-80-2-2025-04-1711-17-32,D:\SIT_auto\SIT_deepethogram\DATA\SIT30-AV8-79-4-2025-04-1711-55-15,D:\SIT_auto\SIT_deepethogram\DATA\SIT32-RT7-80-3-2025-04-1809-17-34,D:\SIT_auto\SIT_deepethogram\DATA\SIT34-EYM-80-1-2025-04-1809-55-14,D:\SIT_auto\SIT_deepethogram\DATA\SIT36-YDH-79-4-2025-04-1810-31-24,D:\SIT_auto\SIT_deepethogram\DATA\SIT38-YD5-79-2-2025-04-1811-08-56,D:\SIT_auto\SIT_deepethogram\DATA\SIT40-K2K-79-5-2025-04-1811-44-42,D:\SIT_auto\SIT_deepethogram\DATA\SIT42-9NO-80-4-2025-04-1812-21-00]
+[2025-07-17 17:03:48,668] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
+[2025-07-17 17:04:56,992] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-17 17:18:01,212] INFO [deepethogram.gui.main.featureextractor_infer:463] Inference finished. If you see error messages above, inference did not complete successfully.
+[2025-07-17 17:18:01,212] INFO [deepethogram.gui.main.featureextractor_infer:468] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[2025-07-17 17:18:01,295] INFO [deepethogram.gui.main.project_loaded_buttons:175] Number finalized labels: 10
+[2025-07-17 17:18:01,946] INFO [deepethogram.projects.import_outputfile:791] Key used to load outputfile: resnet18
+[2025-07-17 17:18:02,148] INFO [deepethogram.gui.main.import_outputfile:886] CHANGING LATENT NAME TO : resnet18
+[2025-07-17 17:18:02,148] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
+[2025-07-17 17:19:02,140] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...

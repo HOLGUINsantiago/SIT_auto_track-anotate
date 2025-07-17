@@ -8,15 +8,15 @@ augs:
   grayscale: 0.5
   hue: 0.1
   normalization:
-    N: 135801897500
+    N: 146986948000
     mean:
-    - 0.4198086977432194
-    - 0.38591966278319084
-    - 0.3583894929837394
+    - 0.4164462071554323
+    - 0.3852139020703655
+    - 0.3575580967434715
     std:
-    - 0.18812246994180273
-    - 0.1906279735657266
-    - 0.19501479378598433
+    - 0.19058749047566914
+    - 0.19298021732548767
+    - 0.19604022740886515
   pad: null
   random_resize: false
   resize:
@@ -65,7 +65,7 @@ reload:
   latest: false
   overwrite_cfg: false
 run:
-  dir: D:\SIT_auto\SIT_deepethogram\gui_logs\250717_112917
+  dir: D:\SIT_auto\SIT_deepethogram\gui_logs\250717_161747
   model: null
   type: gui
 sequence:

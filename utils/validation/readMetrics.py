@@ -49,7 +49,7 @@ def extraire_meilleure_f1(path_h5, mode='last', output_csv=None):
 
 # Exemple d'utilisation
 if __name__ == "__main__":
-    model = r"D:\SIT_auto\SIT_deepethogram\models\250715_141521_feature_extractor_train"
+    model = r"D:\SIT_auto\SIT_deepethogram\models\250717_000000_TS1_FE_model"
     path = model +  r'\classification_metrics.h5'
     mode = 'best_avg' 
     output_csv = r'D:\SIT_auto\val_f1_by_class.csv'

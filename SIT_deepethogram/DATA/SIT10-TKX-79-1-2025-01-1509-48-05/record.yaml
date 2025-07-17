@@ -1,0 +1,20 @@
+flow:
+  all: []
+  default: []
+key: SIT10-TKX-79-1-2025-01-1509-48-05
+keypoint:
+  all: []
+  default: []
+label:
+  all: []
+  default: []
+output:
+  all: []
+  default: []
+rgb:
+  all:
+  - SIT10-TKX-79-1-2025-01-1509-48-05.mp4
+  default: SIT10-TKX-79-1-2025-01-1509-48-05.mp4
+stats:
+  all: []
+  default: []

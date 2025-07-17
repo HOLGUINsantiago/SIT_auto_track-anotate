@@ -1,0 +1,20 @@
+flow:
+  all: []
+  default: []
+key: SIT18-O8U-80-4-2025-01-1512-38-49
+keypoint:
+  all: []
+  default: []
+label:
+  all: []
+  default: []
+output:
+  all: []
+  default: []
+rgb:
+  all:
+  - SIT18-O8U-80-4-2025-01-1512-38-49.mp4
+  default: SIT18-O8U-80-4-2025-01-1512-38-49.mp4
+stats:
+  all: []
+  default: []

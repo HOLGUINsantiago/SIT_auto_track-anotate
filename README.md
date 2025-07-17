@@ -62,6 +62,8 @@ We recommend creating two separate conda environments: one for Jupyter Notebook 
 ## 3. Install sleap (training and using sleap GUI)
 ```{bash}
 conda create -y -n sleap-tracking -c conda-forge -c nvidia -c sleap/label/dev -c sleap -c anaconda sleap=1.4.1
+conda activate sleap-tracking
+sleap-label
 ```
 
 ## 4. Install sleap (automatic infering, correction GUI).
@@ -74,3 +76,40 @@ conda install -c conda-forge pyqt
 
 ## Data availability
 Pretrained models, and annotated videos are available on demand by contacting Dr. Marion Rivalan ([marion.rivalan@cnrs.fr](mailto:marion.rivalan@cnrs.fr)) from [NeuroPSI Sylvie Granon team](https://neuropsi.cnrs.fr/departements/cnn/equipe-sylvie-granon/)
+
+# Context situations : 
+
+### [I want to train DeG models with Solomon data files](docs\SolomonTransformation.md)
+
+Go to [this readme]((docs\SolomonTransformation.md))
+
+### [I want to re-train sleap models](https://sleap.ai/develop/tutorials/initial-training.html)
+
+Use :
+
+`conda activate sleap-tracking`
+
+`sleap/label`
+
+And then follow sleap [documantation](https://sleap.ai/develop/tutorials/initial-training.html)
+
+
+### [I want to crop videos](crop_rotate.py)
+
+This script:
+
+- Skips initial minutes (`skip_minutes`).
+- Rotates if needed (`rotate`, `rotate_angle`).
+- Crops if needed (`crop=(w, h, x, y)`).
+- Converts videos to `.mp4` for tracking.
+
+**Usage example:**
+
+```python
+preprocess_videos(
+    input_folder="path/to/raw_videos",
+    output_folder="for_tracking",
+    skip_minutes=19,
+    rotate=False
+)
+```

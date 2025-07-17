@@ -1,0 +1,20 @@
+flow:
+  all: []
+  default: []
+key: SIT34-EYM-80-1-2025-04-1809-55-14
+keypoint:
+  all: []
+  default: []
+label:
+  all: []
+  default: []
+output:
+  all: []
+  default: []
+rgb:
+  all:
+  - SIT34-EYM-80-1-2025-04-1809-55-14.mp4
+  default: SIT34-EYM-80-1-2025-04-1809-55-14.mp4
+stats:
+  all: []
+  default: []

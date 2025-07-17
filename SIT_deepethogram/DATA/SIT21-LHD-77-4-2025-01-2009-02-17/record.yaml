@@ -1,0 +1,20 @@
+flow:
+  all: []
+  default: []
+key: SIT21-LHD-77-4-2025-01-2009-02-17
+keypoint:
+  all: []
+  default: []
+label:
+  all: []
+  default: []
+output:
+  all: []
+  default: []
+rgb:
+  all:
+  - SIT21-LHD-77-4-2025-01-2009-02-17.mp4
+  default: SIT21-LHD-77-4-2025-01-2009-02-17.mp4
+stats:
+  all: []
+  default: []

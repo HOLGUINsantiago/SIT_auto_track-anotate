@@ -1,0 +1,20 @@
+flow:
+  all: []
+  default: []
+key: SIT23-6BU-78-2-2025-01-2009-41-25
+keypoint:
+  all: []
+  default: []
+label:
+  all: []
+  default: []
+output:
+  all: []
+  default: []
+rgb:
+  all:
+  - SIT23-6BU-78-2-2025-01-2009-41-25.mp4
+  default: SIT23-6BU-78-2-2025-01-2009-41-25.mp4
+stats:
+  all: []
+  default: []

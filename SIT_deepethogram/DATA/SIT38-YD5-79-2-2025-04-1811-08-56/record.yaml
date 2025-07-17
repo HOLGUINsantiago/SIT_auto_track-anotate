@@ -1,0 +1,20 @@
+flow:
+  all: []
+  default: []
+key: SIT38-YD5-79-2-2025-04-1811-08-56
+keypoint:
+  all: []
+  default: []
+label:
+  all: []
+  default: []
+output:
+  all: []
+  default: []
+rgb:
+  all:
+  - SIT38-YD5-79-2-2025-04-1811-08-56.mp4
+  default: SIT38-YD5-79-2-2025-04-1811-08-56.mp4
+stats:
+  all: []
+  default: []

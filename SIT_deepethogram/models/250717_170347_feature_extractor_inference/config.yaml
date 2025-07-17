@@ -1,0 +1,134 @@
+augs:
+  LR: 0.5
+  UD: 0.0
+  brightness: 0.25
+  color_p: 0.5
+  contrast: 0.1
+  crop_size: null
+  dali: false
+  degrees: 10
+  grayscale: 0.5
+  hue: 0.1
+  normalization:
+    N: 146986948000
+    mean:
+    - 0.4164462071554323
+    - 0.3852139020703655
+    - 0.3575580967434715
+    std:
+    - 0.19058749047566914
+    - 0.19298021732548767
+    - 0.19604022740886515
+  pad: null
+  random_resize: false
+  resize:
+  - 224
+  - 224
+  saturation: 0.1
+cmap: deepethogram
+compute:
+  batch_size: 8
+  dali: false
+  distributed: false
+  fp16: false
+  gpu_id: 0
+  max_batch_size: 512
+  metrics_workers: 0
+  min_batch_size: 8
+  num_workers: 3
+control_arrow_jump: 31
+feature_extractor:
+  arch: resnet18
+  curriculum: false
+  dropout_p: 0.25
+  final_activation: sigmoid
+  final_bn: false
+  fusion: average
+  inputs: both
+  n_flows: 10
+  n_rgb: 1
+  sampler: null
+  sampling_ratio: null
+  weights: D:\SIT_auto\SIT_deepethogram\models\250717_000000_TS1_FE_model\lightning_checkpoints\epoch=0-step=999.ckpt
+flow_generator:
+  arch: TinyMotionNet
+  flow_loss: MotionNet
+  flow_max: 10
+  flow_sparsity: false
+  input_images: 11
+  loss: MotionNet
+  max: 5
+  n_rgb: 11
+  smooth_weight_multiplier: 1.0
+  sparsity_weight: 0.0
+  type: flow_generator
+  weights: D:\SIT_auto\SIT_deepethogram\models\250717_000000_TS1_FG_model\lightning_checkpoints\epoch=1-step=1999.ckpt
+inference:
+  directory_list:
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT10-TKX-79-1-2025-01-1509-48-05
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT12-69B-79-5-2025-01-1510-28-02
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT18-O8U-80-4-2025-01-1512-38-49
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT21-LHD-77-4-2025-01-2009-02-17
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT23-6BU-78-2-2025-01-2009-41-25
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT28-O8U-80-2-2025-04-1711-17-32
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT30-AV8-79-4-2025-04-1711-55-15
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT32-RT7-80-3-2025-04-1809-17-34
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT34-EYM-80-1-2025-04-1809-55-14
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT36-YDH-79-4-2025-04-1810-31-24
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT38-YD5-79-2-2025-04-1811-08-56
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT40-K2K-79-5-2025-04-1811-44-42
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT42-9NO-80-4-2025-04-1812-21-00
+  ignore_error: true
+  overwrite: true
+  use_loaded_model_cfg: true
+label_view_width: 31
+log:
+  level: info
+notes: null
+postprocessor:
+  min_bout_length: 1
+  type: min_bout_per_behavior
+prediction_opacity: 0.2
+project:
+  class_names:
+  - background
+  - Contactbyhost
+  - Contactbyvisitor
+  - Followbyhost
+  - Followbyvisitor
+  - Pawcontrol(host)
+  - Rearing
+  - Tailrattling
+  - Grooming
+  config_file: project_config.yaml
+  data_path: D:\SIT_auto\SIT_deepethogram\DATA
+  labeler: null
+  model_path: D:\SIT_auto\SIT_deepethogram\models
+  name: SIT
+  path: D:\SIT_auto\SIT_deepethogram
+  pretrained_path: D:\SIT_auto\SIT_deepethogram\models\pretrained_models
+reload:
+  latest: false
+  overwrite_cfg: false
+run:
+  dir: D:\SIT_auto\SIT_deepethogram\models\250717_170347_feature_extractor_inference
+  model: feature_extractor
+  type: inference
+sequence:
+  filter_length: 15
+split:
+  file: null
+  reload: true
+  train_val_test:
+  - 0.8
+  - 0.2
+  - 0.0
+train:
+  loss_weight_exp: 1.0
+  num_epochs: 10
+  steps_per_epoch:
+    test: 20
+    train: 1000
+    val: 200
+unlabeled_alpha: 0.1
+vertical_arrow_jump: 3

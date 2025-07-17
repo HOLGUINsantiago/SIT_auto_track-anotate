@@ -1,0 +1,20 @@
+flow:
+  all: []
+  default: []
+key: SIT42-9NO-80-4-2025-04-1812-21-00
+keypoint:
+  all: []
+  default: []
+label:
+  all: []
+  default: []
+output:
+  all: []
+  default: []
+rgb:
+  all:
+  - SIT42-9NO-80-4-2025-04-1812-21-00.mp4
+  default: SIT42-9NO-80-4-2025-04-1812-21-00.mp4
+stats:
+  all: []
+  default: []

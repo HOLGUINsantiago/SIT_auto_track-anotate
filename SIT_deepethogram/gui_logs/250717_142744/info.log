@@ -1,0 +1,103 @@
+[2025-07-17 14:27:44,533] INFO [deepethogram.gui.main.initialize_project:1021] loaded project configuration: split:
+  reload: true
+  file: null
+  train_val_test:
+  - 0.8
+  - 0.2
+  - 0.0
+compute:
+  fp16: false
+  num_workers: 3
+  batch_size: 8
+  min_batch_size: 8
+  max_batch_size: 512
+  distributed: false
+  gpu_id: 0
+  dali: false
+  metrics_workers: 0
+reload:
+  overwrite_cfg: false
+  latest: false
+notes: null
+log:
+  level: info
+run:
+  type: gui
+  model: null
+  dir: D:\SIT_auto\SIT_deepethogram\gui_logs\250717_142744
+label_view_width: 31
+control_arrow_jump: 31
+vertical_arrow_jump: 3
+cmap: deepethogram
+unlabeled_alpha: 0.1
+prediction_opacity: 0.2
+postprocessor:
+  type: min_bout_per_behavior
+  min_bout_length: 1
+augs:
+  LR: 0.5
+  UD: 0.0
+  brightness: 0.25
+  contrast: 0.1
+  crop_size: null
+  degrees: 10
+  grayscale: 0.5
+  hue: 0.1
+  normalization:
+    'N': 135801897500
+    mean:
+    - 0.4198086977432194
+    - 0.38591966278319084
+    - 0.3583894929837394
+    std:
+    - 0.18812246994180273
+    - 0.1906279735657266
+    - 0.19501479378598433
+  pad: null
+  random_resize: false
+  resize:
+  - 224
+  - 224
+  saturation: 0.1
+project:
+  class_names:
+  - background
+  - Contactbyhost
+  - Contactbyvisitor
+  - Followbyhost
+  - Followbyvisitor
+  - Pawcontrol(host)
+  - Rearing
+  - Tailrattling
+  - Grooming
+  config_file: project_config.yaml
+  data_path: D:\SIT_auto\SIT_deepethogram\DATA
+  labeler: null
+  model_path: D:\SIT_auto\SIT_deepethogram\models
+  name: SIT
+  path: D:\SIT_auto\SIT_deepethogram
+  pretrained_path: D:\SIT_auto\SIT_deepethogram\models\pretrained_models
+sequence:
+  filter_length: 15
+train:
+  loss_weight_exp: 1.0
+
+[2025-07-17 14:27:44,535] INFO [deepethogram.gui.main.initialize_project:1022] cwd: D:\SIT_auto\SIT_deepethogram\gui_logs\250717_142744
+[2025-07-17 14:27:44,692] INFO [deepethogram.gui.main.project_loaded_buttons:175] Number finalized labels: 10
+[2025-07-17 14:27:45,206] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': None, 'output': 'D:\\SIT_auto\\SIT_deepethogram\\DATA\\SIT20-KUS-80-3-2025-04-1708-49-12\\SIT20-KUS-80-3-2025-04-1708-49-12_outputs.h5', 'rgb': 'D:\\SIT_auto\\SIT_deepethogram\\DATA\\SIT20-KUS-80-3-2025-04-1708-49-12\\SIT20-KUS-80-3-2025-04-1708-49-12.mp4', 'keypoint': None, 'key': 'SIT20-KUS-80-3-2025-04-1708-49-12'}
+[2025-07-17 14:27:45,244] INFO [deepethogram.projects.import_outputfile:791] Key used to load outputfile: resnet18
+[2025-07-17 14:27:45,338] INFO [deepethogram.gui.main.import_outputfile:886] CHANGING LATENT NAME TO : resnet18
+[2025-07-17 14:27:51,314] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': 'D:/SIT_auto/SIT_deepethogram/DATA/Sit5-E4I-77-2-2025-04-1510-20-38\\Sit5-E4I-77-2-2025-04-1510-20-38_labels.csv', 'output': 'D:/SIT_auto/SIT_deepethogram/DATA/Sit5-E4I-77-2-2025-04-1510-20-38\\Sit5-E4I-77-2-2025-04-1510-20-38_outputs.h5', 'rgb': 'D:/SIT_auto/SIT_deepethogram/DATA/Sit5-E4I-77-2-2025-04-1510-20-38\\Sit5-E4I-77-2-2025-04-1510-20-38.mp4', 'keypoint': None, 'key': 'Sit5-E4I-77-2-2025-04-1510-20-38'}
+[2025-07-17 14:27:51,364] INFO [deepethogram.projects.import_outputfile:791] Key used to load outputfile: resnet18
+[2025-07-17 14:27:51,467] INFO [deepethogram.gui.main.import_outputfile:886] CHANGING LATENT NAME TO : resnet18
+[2025-07-17 14:28:51,499] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-17 14:29:34,059] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
+[2025-07-17 14:30:40,335] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-17 14:34:04,986] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
+[2025-07-17 14:36:02,791] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-17 14:44:03,443] INFO [deepethogram.gui.main.save:800] saving...
+[2025-07-17 14:44:03,455] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
+[2025-07-17 14:44:19,927] INFO [deepethogram.gui.main.save:800] saving...
+[2025-07-17 14:45:45,681] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-17 14:54:04,956] WARNING [deepethogram.gui.main.add_class:680] No behavior entered
+[2025-07-17 15:03:31,506] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
