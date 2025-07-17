@@ -13,8 +13,9 @@ First make sur to have [Git](https://git-scm.com/downloads) installed on your pc
 
 On demand to [holguinsanty@gmail.com](mailto:holguinsanty@gmail.com) or  [marion.rivalan@cnrs.fr](mailto:marion.rivalan@cnrs.fr)
 
-1. Copy the pretrained models on your deepEthogram project `SIT_deepethogram/models/`
-2. Change all the absolute paths of this project : Use visual studio code or other tool for replacing `D:\SIT_auto` by your own `path (ex : C:\USER_X\TOOLS\SIT\SIT_auto_track-anotate)`
+1. Copy the pretrained models on your deepEthogram project `SIT_deepethogram/models/` (if the folders exist, delete them, they are not usefull)
+2. Copy the pretrained models on your sleap project `SLEAP_track\models\` (if the folders exist, delete them, they are not usefull)
+3. Change all the absolute paths of this project : Use visual studio code or other tool for replacing `D:\SIT_auto` by your own `path (ex : C:\USER_X\TOOLS\SIT\SIT_auto_track-anotate)`
 
 ## 2. DeepEthogram installation - For NVIDIA GPU - CUDA 11.8
 Make sure to have [cuda](https://developer.nvidia.com/cuda-11-8-0-download-archive) and [conda](https://www.anaconda.com/docs/getting-started/miniconda/install#windows-powershell) installed on your PC
