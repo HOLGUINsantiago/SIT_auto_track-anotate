@@ -11,7 +11,7 @@ First make sur to have [Git](https://git-scm.com/downloads) installed on your pc
 
 ### Get pretrained models :
 
-On demand to [holguinsanty@gmail.com](mailto:holguinsanty@gmail.com)
+On demand to [holguinsanty@gmail.com](mailto:holguinsanty@gmail.com) or  [marion.rivalan@cnrs.fr](mailto:marion.rivalan@cnrs.fr)
 
 1. Copy the pretrained models on your deepEthogram project `your_project/models/`
 2. Change all the absolute paths of this project : Use visual studio code or other tool for replacing `D:\SIT_auto` by your own `path (ex : C:\USER_X\TOOLS\SIT\SIT_auto_track-anotate)`
@@ -65,3 +65,6 @@ conda create -y -n sleap-no-GUI -c conda-forge -c nvidia -c sleap/label/dev -c s
 conda activate sleap-no-GUI
 conda install -c conda-forge pyqt
 ```
+
+## Data availability
+Pretrained models, and annotated videos are available on demand by contacting Dr. Marion Rivalan ([marion.rivalan@cnrs.fr](mailto:marion.rivalan@cnrs.fr)) from [NeuroPSI Sylvie Granon team](https://neuropsi.cnrs.fr/departements/cnn/equipe-sylvie-granon/)
