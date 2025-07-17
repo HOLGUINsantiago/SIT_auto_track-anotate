@@ -1,0 +1,153 @@
+[2025-07-15 11:35:18,315] INFO [__main__.flow_generator_train:54] args: C:\Users\TeamGranon\anaconda3\envs\deg_solo\lib\site-packages\deepethogram\flow_generator\train.py project.path=D:\SIT_auto\SIT_deepethogram reload.weights=D:\SIT_auto\SIT_deepethogram\models\pretrained_models\200221_115158_TinyMotionNet\checkpoint.pt
+[2025-07-15 11:35:18,315] INFO [__main__.flow_generator_train:62] configuration used ~~~~~
+[2025-07-15 11:35:18,319] INFO [__main__.flow_generator_train:63] split:
+  reload: true
+  file: null
+  train_val_test:
+  - 0.8
+  - 0.2
+  - 0.0
+compute:
+  fp16: false
+  num_workers: 4
+  batch_size: 32
+  min_batch_size: 8
+  max_batch_size: 512
+  distributed: false
+  gpu_id: 0
+  dali: false
+  metrics_workers: 0
+reload:
+  overwrite_cfg: false
+  latest: false
+  weights: D:\SIT_auto\SIT_deepethogram\models\pretrained_models\200221_115158_TinyMotionNet\checkpoint.pt
+notes: null
+log:
+  level: info
+augs:
+  brightness: 0.25
+  contrast: 0.1
+  hue: 0.1
+  saturation: 0.1
+  color_p: 0.5
+  grayscale: 0.5
+  crop_size: null
+  resize:
+  - 224
+  - 224
+  dali: false
+  random_resize: false
+  pad: null
+  LR: 0.5
+  UD: 0.0
+  degrees: 10
+  normalization:
+    'N': 134573787500
+    mean:
+    - 0.4188662543741402
+    - 0.384645660879449
+    - 0.3572427996897448
+    std:
+    - 0.18899837086842783
+    - 0.1915122234643136
+    - 0.19592325647909137
+train:
+  lr: 0.0001
+  scheduler: plateau
+  num_epochs: 10
+  steps_per_epoch:
+    train: 1000
+    val: 200
+    test: 20
+  min_lr: 5.0e-07
+  stopping_type: learning_rate
+  milestones:
+  - 50
+  - 100
+  - 150
+  - 200
+  - 250
+  - 300
+  weight_loss: true
+  patience: 3
+  early_stopping_begins: 0
+  viz_metrics: true
+  viz_examples: 10
+  reduction_factor: 0.1
+  loss_weight_exp: 1.0
+  loss_gamma: 1.0
+  label_smoothing: 0.05
+  oversampling_exp: 0.0
+  regularization:
+    style: l2_sp
+    alpha: 1.0e-05
+    beta: 0.001
+flow_generator:
+  type: flow_generator
+  flow_loss: MotionNet
+  flow_max: 10
+  input_images: 11
+  flow_sparsity: false
+  smooth_weight_multiplier: 1.0
+  sparsity_weight: 0.0
+  loss: MotionNet
+  max: 5
+  n_rgb: 11
+  arch: TinyMotionNet
+  weights: pretrained
+project:
+  class_names:
+  - background
+  - Contactbyhost
+  - Contactbyvisitor
+  - Followbyhost
+  - Followbyvisitor
+  - Pawcontrol(host)
+  - Rearing
+  - Tailrattling
+  - Grooming
+  config_file: D:\SIT_auto\SIT_deepethogram\project_config.yaml
+  data_path: D:\SIT_auto\SIT_deepethogram\DATA
+  labeler: null
+  model_path: D:\SIT_auto\SIT_deepethogram\models
+  name: SIT
+  path: D:\SIT_auto\SIT_deepethogram
+  pretrained_path: D:\SIT_auto\SIT_deepethogram\models\pretrained_models
+sequence:
+  filter_length: 15
+run:
+  type: train
+  model: flow_generator
+  dir: D:\SIT_auto\SIT_deepethogram\models\250715_113518_flow_generator_train
+
+[2025-07-15 11:35:18,328] INFO [deepethogram.data.utils.get_split_from_records:488] Getting split from records...None
+[2025-07-15 11:35:18,581] INFO [__main__.flow_generator_train:67] Total trainable params: 1,951,784
+[2025-07-15 11:35:18,659] INFO [deepethogram.projects.get_weightfile_from_cfg:1070] loading pretrained weights: D:\SIT_auto\SIT_deepethogram\models\pretrained_models\200221_115158_TinyMotionNet\checkpoint.pt
+[2025-07-15 11:35:18,659] INFO [deepethogram.utils.load_state:341] loading from checkpoint file D:\SIT_auto\SIT_deepethogram\models\pretrained_models\200221_115158_TinyMotionNet\checkpoint.pt...
+[2025-07-15 11:35:18,675] INFO [__main__.get_metrics:364] key metric is SSIM
+[2025-07-15 11:35:18,692] INFO [deepethogram.data.augs.get_gpu_transforms:246] GPU transforms: {'train': Sequential(
+  (0): ToFloat()
+  (1): VideoSequential(
+    (RandomHorizontalFlip_0): RandomHorizontalFlip(p=0.5, p_batch=1.0, same_on_batch=False)
+    (RandomRotation_1): RandomRotation(degrees=10, p=0.5, p_batch=1.0, same_on_batch=False, resample=bilinear, align_corners=True)
+    (ColorJitter_2): ColorJitter(brightness=0.25, contrast=0.1, saturation=0.1, hue=0.1, p=0.5, p_batch=1.0, same_on_batch=False)
+    (RandomGrayscale_3): RandomGrayscale(p=0.5, p_batch=1.0, same_on_batch=False)
+  )
+  (2): NormalizeVideo()
+  (3): StackClipInChannels()
+), 'val': Sequential(
+  (0): ToFloat()
+  (1): NormalizeVideo()
+  (2): StackClipInChannels()
+), 'test': Sequential(
+  (0): ToFloat()
+  (1): NormalizeVideo()
+  (2): StackClipInChannels()
+), 'denormalize': Sequential(
+  (0): UnstackClip()
+  (1): DenormalizeVideo()
+)}
+[2025-07-15 11:35:18,693] INFO [deepethogram.base.__init__:95] scheduler mode: min
+[2025-07-15 11:35:18,769] INFO [deepethogram.losses.get_regularization_loss:205] Regularization: L2_SP. Pretrained file: D:\SIT_auto\SIT_deepethogram\models\pretrained_models\200221_115158_TinyMotionNet\checkpoint.pt alpha: 1e-05 beta: 0.001
+[2025-07-15 11:35:18,779] INFO [deepethogram.flow_generator.losses.__init__:179] Using MotionNet Loss with settings: smooth_weights: [0.01, 0.02, 0.04, 0.08, 0.16] flow_sparsity: False sparsity_weight: 0.0
+[2025-07-15 11:35:18,961] INFO [deepethogram.base.configure_optimizers:227] learning rate: 0.0001

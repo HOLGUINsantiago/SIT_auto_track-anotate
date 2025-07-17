@@ -1,0 +1,3 @@
+from deepethogram.postprocessing import postprocess_and_save
+
+postprocess_and_save(r"D:\LBN\Maternal_auto_classification_deepethogram\project_config.yaml")

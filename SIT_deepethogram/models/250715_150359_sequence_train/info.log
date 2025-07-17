@@ -1,0 +1,163 @@
+[2025-07-15 15:03:59,869] INFO [__main__.sequence_train:43] args: C:\Users\TeamGranon\anaconda3\envs\deg_solo\lib\site-packages\deepethogram\sequence\train.py project.path=D:\SIT_auto\SIT_deepethogram
+[2025-07-15 15:03:59,869] INFO [__main__.sequence_train:49] Configuration used: 
+[2025-07-15 15:03:59,880] INFO [__main__.sequence_train:50] split:
+  reload: true
+  file: null
+  train_val_test:
+  - 0.8
+  - 0.2
+  - 0.0
+compute:
+  fp16: false
+  num_workers: 3
+  batch_size: 8
+  min_batch_size: 2
+  max_batch_size: 64
+  distributed: false
+  gpu_id: 0
+  dali: false
+  metrics_workers: 0
+reload:
+  overwrite_cfg: false
+  latest: false
+notes: null
+log:
+  level: info
+feature_extractor:
+  arch: resnet18
+  fusion: average
+  sampler: null
+  final_bn: false
+  sampling_ratio: null
+  final_activation: sigmoid
+  dropout_p: 0.25
+  n_flows: 10
+  n_rgb: 1
+  curriculum: false
+  inputs: both
+  weights: pretrained
+train:
+  steps_per_epoch:
+    train: 1000
+    val: 1000
+    test: 20
+  num_epochs: 100
+  lr: 0.0001
+  scheduler: plateau
+  min_lr: 5.0e-07
+  stopping_type: learning_rate
+  milestones:
+  - 50
+  - 100
+  - 150
+  - 200
+  - 250
+  - 300
+  weight_loss: true
+  patience: 5
+  early_stopping_begins: 0
+  viz_metrics: true
+  viz_examples: 10
+  reduction_factor: 0.1
+  loss_weight_exp: 1.0
+  loss_gamma: 1.0
+  label_smoothing: 0.05
+  oversampling_exp: 0.0
+  regularization:
+    style: l2
+    alpha: 0.01
+    beta: 0.001
+sequence:
+  arch: tgmj
+  latent_name: resnet18
+  output_name: null
+  sequence_length: 180
+  dropout_p: 0.5
+  num_layers: 3
+  hidden_size: 64
+  nonoverlapping: true
+  filter_length: 15
+  input_dropout: 0.5
+  n_filters: 8
+  tgm_reduction: max
+  c_in: 1
+  c_out: 8
+  soft_attn: true
+  num_features: 128
+  bidirectional: false
+  rnn_style: lstm
+  hidden_dropout: 0.0
+  weights: null
+  nonlinear_classification: true
+  final_bn: true
+  input_type: features
+augs:
+  LR: 0.5
+  UD: 0.0
+  brightness: 0.25
+  contrast: 0.1
+  crop_size: null
+  degrees: 10
+  grayscale: 0.5
+  hue: 0.1
+  normalization:
+    'N': 134573787500
+    mean:
+    - 0.4188662543741402
+    - 0.384645660879449
+    - 0.3572427996897448
+    std:
+    - 0.18899837086842783
+    - 0.1915122234643136
+    - 0.19592325647909137
+  pad: null
+  random_resize: false
+  resize:
+  - 224
+  - 224
+  saturation: 0.1
+project:
+  class_names:
+  - background
+  - Contactbyhost
+  - Contactbyvisitor
+  - Followbyhost
+  - Followbyvisitor
+  - Pawcontrol(host)
+  - Rearing
+  - Tailrattling
+  - Grooming
+  config_file: D:\SIT_auto\SIT_deepethogram\project_config.yaml
+  data_path: D:\SIT_auto\SIT_deepethogram\DATA
+  labeler: null
+  model_path: D:\SIT_auto\SIT_deepethogram\models
+  name: SIT
+  path: D:\SIT_auto\SIT_deepethogram
+  pretrained_path: D:\SIT_auto\SIT_deepethogram\models\pretrained_models
+run:
+  type: train
+  model: sequence
+  dir: D:\SIT_auto\SIT_deepethogram\models\250715_150359_sequence_train
+
+[2025-07-15 15:03:59,896] WARNING [deepethogram.projects.filter_records_for_filetypes:663] No label file found in record: SIT20-KUS-80-3-2025-04-1708-49-12
+[2025-07-15 15:03:59,896] WARNING [deepethogram.projects.filter_records_for_filetypes:663] No label file found in record: SIT24-XBE-79-2-2025-04-1710-03-11
+[2025-07-15 15:03:59,896] WARNING [deepethogram.projects.filter_records_for_filetypes:663] No label file found in record: SIT26-69B-80-1-2025-04-1710-41-04
+[2025-07-15 15:03:59,896] WARNING [deepethogram.projects.filter_records_for_filetypes:663] No label file found in record: SIT7-H38-78-2-2025-04-1511-01-21
+[2025-07-15 15:03:59,927] INFO [deepethogram.data.utils.get_split_from_records:488] Getting split from records...None
+[2025-07-15 15:03:59,988] WARNING [root.fix_label:579] file D:\SIT_auto\SIT_deepethogram\DATA\SIT15-DOA-77-3-2025-04-1610-03-51\SIT15-DOA-77-3-2025-04-1610-03-51_labels.csv has 11 unlabeled frames!! setting to background...
+[2025-07-15 15:04:00,132] INFO [deepethogram.data.utils.make_loss_weight:116] Class counts: [30953 23838  1212 13444   102  1179   840     0   294]
+[2025-07-15 15:04:00,133] INFO [deepethogram.data.utils.make_loss_weight:117] Pos weight: [  1.09223662   1.71671281  52.43316832   3.81709313 633.91176471
+  53.92875318  76.09642857          inf 219.2755102 ]
+[2025-07-15 15:04:00,133] INFO [deepethogram.data.utils.make_loss_weight:118] Pos weight, weighted: [  1.0922366   1.7167128  52.433167    3.8170931 633.91174    53.928753
+  76.09643     0.        219.27551  ]
+[2025-07-15 15:04:00,134] INFO [deepethogram.data.utils.make_loss_weight:119] Softmax weight: [0.00199209 0.00258668 0.05087557 0.00458652 0.60452146 0.05229957
+ 0.07340618 0.         0.20973194]
+[2025-07-15 15:04:00,134] INFO [deepethogram.data.utils.make_loss_weight:120] Softmax weight transformed: [0.00199209 0.00258668 0.05087557 0.00458652 0.60452145 0.05229957
+ 0.07340617 0.         0.20973194]
+[2025-07-15 15:04:00,237] WARNING [deepethogram.projects.get_weightfile_from_cfg:1092] no sequence weights found...
+[2025-07-15 15:04:00,237] INFO [__main__.sequence_train:63] Total trainable params: 266,019
+[2025-07-15 15:04:00,238] INFO [deepethogram.feature_extractor.train.get_metrics:632] key metric: f1_class_mean
+[2025-07-15 15:04:00,241] INFO [deepethogram.feature_extractor.losses.__init__:100] Focal loss: gamma 1.00 smoothing: 0.05
+[2025-07-15 15:04:00,241] INFO [deepethogram.losses.get_regularization_loss:188] Regularization: L2. alpha: 0.01 
+[2025-07-15 15:04:00,242] INFO [deepethogram.base.__init__:95] scheduler mode: max
+[2025-07-15 15:04:00,459] INFO [deepethogram.base.configure_optimizers:227] learning rate: 0.0001

@@ -1,0 +1,212 @@
+[2025-07-15 12:42:46,688] INFO [__main__.feature_extractor_train:66] args: C:\Users\TeamGranon\anaconda3\envs\deg_solo\lib\site-packages\deepethogram\feature_extractor\train.py project.path=D:\SIT_auto\SIT_deepethogram feature_extractor.weights=D:\SIT_auto\SIT_deepethogram\models\pretrained_models\200415_125824_hidden_two_stream_kinetics_degf\checkpoint.pt flow_generator.weights=D:\SIT_auto\SIT_deepethogram\models\250715_120117_flow_generator_train\lightning_checkpoints\epoch=1-step=1999.ckpt
+[2025-07-15 12:42:46,689] INFO [__main__.feature_extractor_train:71] configuration used ~~~~~
+[2025-07-15 12:42:46,695] INFO [__main__.feature_extractor_train:72] split:
+  reload: true
+  file: null
+  train_val_test:
+  - 0.8
+  - 0.2
+  - 0.0
+compute:
+  fp16: false
+  num_workers: 3
+  batch_size: 8
+  min_batch_size: 8
+  max_batch_size: 512
+  distributed: false
+  gpu_id: 0
+  dali: false
+  metrics_workers: 0
+reload:
+  overwrite_cfg: false
+  latest: false
+notes: null
+log:
+  level: info
+augs:
+  brightness: 0.25
+  contrast: 0.1
+  hue: 0.1
+  saturation: 0.1
+  color_p: 0.5
+  grayscale: 0.5
+  crop_size: null
+  resize:
+  - 224
+  - 224
+  dali: false
+  random_resize: false
+  pad: null
+  LR: 0.5
+  UD: 0.0
+  degrees: 10
+  normalization:
+    'N': 134573787500
+    mean:
+    - 0.4188662543741402
+    - 0.384645660879449
+    - 0.3572427996897448
+    std:
+    - 0.18899837086842783
+    - 0.1915122234643136
+    - 0.19592325647909137
+train:
+  lr: 0.0001
+  scheduler: plateau
+  num_epochs: 20
+  steps_per_epoch:
+    train: 1000
+    val: 1000
+    test: null
+  min_lr: 5.0e-07
+  stopping_type: learning_rate
+  milestones:
+  - 50
+  - 100
+  - 150
+  - 200
+  - 250
+  - 300
+  weight_loss: true
+  patience: 3
+  early_stopping_begins: 0
+  viz_metrics: true
+  viz_examples: 10
+  reduction_factor: 0.1
+  loss_weight_exp: 1.0
+  loss_gamma: 1.0
+  label_smoothing: 0.05
+  oversampling_exp: 0.0
+  regularization:
+    style: l2_sp
+    alpha: 1.0e-05
+    beta: 0.001
+flow_generator:
+  type: flow_generator
+  flow_loss: MotionNet
+  flow_max: 10
+  input_images: 11
+  flow_sparsity: false
+  smooth_weight_multiplier: 1.0
+  sparsity_weight: 0.0
+  loss: MotionNet
+  max: 5
+  n_rgb: 11
+  arch: TinyMotionNet
+  weights: D:\SIT_auto\SIT_deepethogram\models\250715_120117_flow_generator_train\lightning_checkpoints\epoch=1-step=1999.ckpt
+feature_extractor:
+  arch: resnet18
+  fusion: average
+  sampler: null
+  final_bn: false
+  sampling_ratio: null
+  final_activation: sigmoid
+  dropout_p: 0.25
+  n_flows: 10
+  n_rgb: 1
+  curriculum: false
+  inputs: both
+  weights: D:\SIT_auto\SIT_deepethogram\models\pretrained_models\200415_125824_hidden_two_stream_kinetics_degf\checkpoint.pt
+project:
+  class_names:
+  - background
+  - Contactbyhost
+  - Contactbyvisitor
+  - Followbyhost
+  - Followbyvisitor
+  - Pawcontrol(host)
+  - Rearing
+  - Tailrattling
+  - Grooming
+  config_file: D:\SIT_auto\SIT_deepethogram\project_config.yaml
+  data_path: D:\SIT_auto\SIT_deepethogram\DATA
+  labeler: null
+  model_path: D:\SIT_auto\SIT_deepethogram\models
+  name: SIT
+  path: D:\SIT_auto\SIT_deepethogram
+  pretrained_path: D:\SIT_auto\SIT_deepethogram\models\pretrained_models
+sequence:
+  filter_length: 15
+run:
+  type: train
+  model: feature_extractor
+  dir: D:\SIT_auto\SIT_deepethogram\models\250715_124246_feature_extractor_train
+
+[2025-07-15 12:42:46,761] INFO [deepethogram.projects.get_weightfile_from_cfg:1081] loading specified weights: D:\SIT_auto\SIT_deepethogram\models\250715_120117_flow_generator_train\lightning_checkpoints\epoch=1-step=1999.ckpt
+[2025-07-15 12:42:46,761] INFO [__main__.feature_extractor_train:79] loading flow generator from file D:\SIT_auto\SIT_deepethogram\models\250715_120117_flow_generator_train\lightning_checkpoints\epoch=1-step=1999.ckpt
+[2025-07-15 12:42:46,761] INFO [deepethogram.utils.load_state:341] loading from checkpoint file D:\SIT_auto\SIT_deepethogram\models\250715_120117_flow_generator_train\lightning_checkpoints\epoch=1-step=1999.ckpt...
+[2025-07-15 12:42:46,783] WARNING [deepethogram.projects.filter_records_for_filetypes:663] No label file found in record: SIT20-KUS-80-3-2025-04-1708-49-12
+[2025-07-15 12:42:46,783] WARNING [deepethogram.projects.filter_records_for_filetypes:663] No label file found in record: SIT24-XBE-79-2-2025-04-1710-03-11
+[2025-07-15 12:42:46,783] WARNING [deepethogram.projects.filter_records_for_filetypes:663] No label file found in record: SIT26-69B-80-1-2025-04-1710-41-04
+[2025-07-15 12:42:46,791] WARNING [deepethogram.projects.filter_records_for_filetypes:663] No label file found in record: SIT7-H38-78-2-2025-04-1511-01-21
+[2025-07-15 12:42:46,812] INFO [deepethogram.data.utils.get_split_from_records:488] Getting split from records...None
+[2025-07-15 12:42:46,870] WARNING [root.fix_label:579] file D:\SIT_auto\SIT_deepethogram\DATA\SIT15-DOA-77-3-2025-04-1610-03-51\SIT15-DOA-77-3-2025-04-1610-03-51_labels.csv has 11 unlabeled frames!! setting to background...
+[2025-07-15 12:42:47,024] INFO [deepethogram.data.utils.make_loss_weight:116] Class counts: [30953 23838  1212 13444   102  1179   840     0   294]
+[2025-07-15 12:42:47,025] INFO [deepethogram.data.utils.make_loss_weight:117] Pos weight: [  1.09223662   1.71671281  52.43316832   3.81709313 633.91176471
+  53.92875318  76.09642857          inf 219.2755102 ]
+[2025-07-15 12:42:47,025] INFO [deepethogram.data.utils.make_loss_weight:118] Pos weight, weighted: [  1.0922366   1.7167128  52.433167    3.8170931 633.91174    53.928753
+  76.09643     0.        219.27551  ]
+[2025-07-15 12:42:47,025] INFO [deepethogram.data.utils.make_loss_weight:119] Softmax weight: [0.00199209 0.00258668 0.05087557 0.00458652 0.60452146 0.05229957
+ 0.07340618 0.         0.20973194]
+[2025-07-15 12:42:47,025] INFO [deepethogram.data.utils.make_loss_weight:120] Softmax weight transformed: [0.00199209 0.00258668 0.05087557 0.00458652 0.60452145 0.05229957
+ 0.07340617 0.         0.20973194]
+[2025-07-15 12:42:47,088] INFO [deepethogram.projects.get_weightfile_from_cfg:1081] loading specified weights: D:\SIT_auto\SIT_deepethogram\models\pretrained_models\200415_125824_hidden_two_stream_kinetics_degf\checkpoint.pt
+[2025-07-15 12:42:47,088] INFO [__main__.build_model_from_cfg:220] feature extractor weightfile: D:\SIT_auto\SIT_deepethogram\models\pretrained_models\200415_125824_hidden_two_stream_kinetics_degf\checkpoint.pt
+[2025-07-15 12:42:47,152] INFO [deepethogram.feature_extractor.models.CNN.get_cnn:91] Custom bias: Parameter containing:
+tensor([-0.0882, -0.5404, -3.9595, -1.3395, -6.4519, -3.9877, -4.3320,  0.0000,
+        -5.3903], requires_grad=True)
+[2025-07-15 12:42:47,152] INFO [deepethogram.utils.load_feature_extractor_components:630] loading component spatial from file D:\SIT_auto\SIT_deepethogram\models\pretrained_models\200415_125824_hidden_two_stream_kinetics_degf\checkpoint.pt
+[2025-07-15 12:42:47,727] WARNING [deepethogram.utils.load_state_from_dict:249] 1.weight has different size: pretrained:torch.Size([700, 512]) model:torch.Size([9, 512])
+[2025-07-15 12:42:47,727] WARNING [deepethogram.utils.load_state_from_dict:249] 1.bias has different size: pretrained:torch.Size([700]) model:torch.Size([9])
+[2025-07-15 12:42:47,808] INFO [deepethogram.feature_extractor.models.CNN.get_cnn:91] Custom bias: Parameter containing:
+tensor([-0.0882, -0.5404, -3.9595, -1.3395, -6.4519, -3.9877, -4.3320,  0.0000,
+        -5.3903], requires_grad=True)
+[2025-07-15 12:42:47,808] INFO [deepethogram.utils.load_feature_extractor_components:630] loading component flow from file D:\SIT_auto\SIT_deepethogram\models\pretrained_models\200415_125824_hidden_two_stream_kinetics_degf\checkpoint.pt
+[2025-07-15 12:42:47,830] WARNING [deepethogram.utils.load_state_from_dict:249] 1.weight has different size: pretrained:torch.Size([700, 512]) model:torch.Size([9, 512])
+[2025-07-15 12:42:47,837] WARNING [deepethogram.utils.load_state_from_dict:249] 1.bias has different size: pretrained:torch.Size([700]) model:torch.Size([9])
+[2025-07-15 12:42:47,901] INFO [deepethogram.projects.get_weightfile_from_cfg:1081] loading specified weights: D:\SIT_auto\SIT_deepethogram\models\250715_120117_flow_generator_train\lightning_checkpoints\epoch=1-step=1999.ckpt
+[2025-07-15 12:42:47,901] INFO [deepethogram.utils.load_state:341] loading from checkpoint file D:\SIT_auto\SIT_deepethogram\models\250715_120117_flow_generator_train\lightning_checkpoints\epoch=1-step=1999.ckpt...
+[2025-07-15 12:42:47,916] INFO [deepethogram.utils.load_feature_extractor_components:630] loading component fusion from file D:\SIT_auto\SIT_deepethogram\models\pretrained_models\200415_125824_hidden_two_stream_kinetics_degf\checkpoint.pt
+[2025-07-15 12:42:47,959] INFO [__main__.get_metrics:632] key metric: f1_class_mean_nobg
+[2025-07-15 12:42:47,995] WARNING [deepethogram.projects.filter_records_for_filetypes:663] No label file found in record: SIT20-KUS-80-3-2025-04-1708-49-12
+[2025-07-15 12:42:47,995] WARNING [deepethogram.projects.filter_records_for_filetypes:663] No label file found in record: SIT24-XBE-79-2-2025-04-1710-03-11
+[2025-07-15 12:42:47,995] WARNING [deepethogram.projects.filter_records_for_filetypes:663] No label file found in record: SIT26-69B-80-1-2025-04-1710-41-04
+[2025-07-15 12:42:47,995] WARNING [deepethogram.projects.filter_records_for_filetypes:663] No label file found in record: SIT7-H38-78-2-2025-04-1511-01-21
+[2025-07-15 12:42:48,031] INFO [deepethogram.data.utils.get_split_from_records:488] Getting split from records...None
+[2025-07-15 12:42:48,079] WARNING [root.fix_label:579] file D:\SIT_auto\SIT_deepethogram\DATA\SIT15-DOA-77-3-2025-04-1610-03-51\SIT15-DOA-77-3-2025-04-1610-03-51_labels.csv has 11 unlabeled frames!! setting to background...
+[2025-07-15 12:42:48,229] INFO [deepethogram.data.utils.make_loss_weight:116] Class counts: [30953 23838  1212 13444   102  1179   840     0   294]
+[2025-07-15 12:42:48,229] INFO [deepethogram.data.utils.make_loss_weight:117] Pos weight: [  1.09223662   1.71671281  52.43316832   3.81709313 633.91176471
+  53.92875318  76.09642857          inf 219.2755102 ]
+[2025-07-15 12:42:48,229] INFO [deepethogram.data.utils.make_loss_weight:118] Pos weight, weighted: [  1.0922366   1.7167128  52.433167    3.8170931 633.91174    53.928753
+  76.09643     0.        219.27551  ]
+[2025-07-15 12:42:48,229] INFO [deepethogram.data.utils.make_loss_weight:119] Softmax weight: [0.00199209 0.00258668 0.05087557 0.00458652 0.60452146 0.05229957
+ 0.07340618 0.         0.20973194]
+[2025-07-15 12:42:48,229] INFO [deepethogram.data.utils.make_loss_weight:120] Softmax weight transformed: [0.00199209 0.00258668 0.05087557 0.00458652 0.60452145 0.05229957
+ 0.07340617 0.         0.20973194]
+[2025-07-15 12:42:48,229] INFO [deepethogram.feature_extractor.losses.__init__:100] Focal loss: gamma 1.00 smoothing: 0.05
+[2025-07-15 12:42:48,265] INFO [deepethogram.losses.get_regularization_loss:205] Regularization: L2_SP. Pretrained file: D:\SIT_auto\SIT_deepethogram\models\pretrained_models\200415_125824_hidden_two_stream_kinetics_degf\checkpoint.pt alpha: 1e-05 beta: 0.001
+[2025-07-15 12:42:48,297] INFO [deepethogram.data.augs.get_gpu_transforms:246] GPU transforms: {'train': Sequential(
+  (0): ToFloat()
+  (1): VideoSequential(
+    (RandomHorizontalFlip_0): RandomHorizontalFlip(p=0.5, p_batch=1.0, same_on_batch=False)
+    (RandomRotation_1): RandomRotation(degrees=10, p=0.5, p_batch=1.0, same_on_batch=False, resample=bilinear, align_corners=True)
+    (ColorJitter_2): ColorJitter(brightness=0.25, contrast=0.1, saturation=0.1, hue=0.1, p=0.5, p_batch=1.0, same_on_batch=False)
+    (RandomGrayscale_3): RandomGrayscale(p=0.5, p_batch=1.0, same_on_batch=False)
+  )
+  (2): NormalizeVideo()
+  (3): StackClipInChannels()
+), 'val': Sequential(
+  (0): ToFloat()
+  (1): NormalizeVideo()
+  (2): StackClipInChannels()
+), 'test': Sequential(
+  (0): ToFloat()
+  (1): NormalizeVideo()
+  (2): StackClipInChannels()
+), 'denormalize': Sequential(
+  (0): UnstackClip()
+  (1): DenormalizeVideo()
+)}
+[2025-07-15 12:42:48,297] INFO [deepethogram.base.__init__:95] scheduler mode: max
+[2025-07-15 12:42:48,297] INFO [deepethogram.base.get_train_sampler:171] not using oversampling
+[2025-07-15 12:42:48,557] INFO [deepethogram.base.configure_optimizers:227] learning rate: 0.0001

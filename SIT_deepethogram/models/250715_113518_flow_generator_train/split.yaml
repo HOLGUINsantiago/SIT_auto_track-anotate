@@ -1,0 +1,101 @@
+test: {}
+train:
+  SIT1-JNG-77-4-2025-04-1509-04-17:
+    flow: null
+    key: SIT1-JNG-77-4-2025-04-1509-04-17
+    keypoint: null
+    label: D:\SIT_auto\SIT_deepethogram\DATA\SIT1-JNG-77-4-2025-04-1509-04-17\SIT1-JNG-77-4-2025-04-1509-04-17_labels.csv
+    output: null
+    rgb: D:\SIT_auto\SIT_deepethogram\DATA\SIT1-JNG-77-4-2025-04-1509-04-17\SIT1-JNG-77-4-2025-04-1509-04-17.mp4
+  SIT13-KU2-78-3-2025-04-1609-26-39:
+    flow: null
+    key: SIT13-KU2-78-3-2025-04-1609-26-39
+    keypoint: null
+    label: D:\SIT_auto\SIT_deepethogram\DATA\SIT13-KU2-78-3-2025-04-1609-26-39\SIT13-KU2-78-3-2025-04-1609-26-39_labels.csv
+    output: null
+    rgb: D:\SIT_auto\SIT_deepethogram\DATA\SIT13-KU2-78-3-2025-04-1609-26-39\SIT13-KU2-78-3-2025-04-1609-26-39.mp4
+  SIT15-DOA-77-3-2025-04-1610-03-51:
+    flow: null
+    key: SIT15-DOA-77-3-2025-04-1610-03-51
+    keypoint: null
+    label: D:\SIT_auto\SIT_deepethogram\DATA\SIT15-DOA-77-3-2025-04-1610-03-51\SIT15-DOA-77-3-2025-04-1610-03-51_labels.csv
+    output: null
+    rgb: D:\SIT_auto\SIT_deepethogram\DATA\SIT15-DOA-77-3-2025-04-1610-03-51\SIT15-DOA-77-3-2025-04-1610-03-51.mp4
+  SIT17-BQ9-78-2-2025-04-1610-40-34:
+    flow: null
+    key: SIT17-BQ9-78-2-2025-04-1610-40-34
+    keypoint: null
+    label: D:\SIT_auto\SIT_deepethogram\DATA\SIT17-BQ9-78-2-2025-04-1610-40-34\SIT17-BQ9-78-2-2025-04-1610-40-34_labels.csv
+    output: null
+    rgb: D:\SIT_auto\SIT_deepethogram\DATA\SIT17-BQ9-78-2-2025-04-1610-40-34\SIT17-BQ9-78-2-2025-04-1610-40-34.mp4
+  SIT22-TKX-80-5-2025-04-1709-27-09:
+    flow: null
+    key: SIT22-TKX-80-5-2025-04-1709-27-09
+    keypoint: null
+    label: null
+    output: null
+    rgb: D:\SIT_auto\SIT_deepethogram\DATA\SIT22-TKX-80-5-2025-04-1709-27-09\SIT22-TKX-80-5-2025-04-1709-27-09.mp4
+  SIT24-XBE-79-2-2025-04-1710-03-11:
+    flow: null
+    key: SIT24-XBE-79-2-2025-04-1710-03-11
+    keypoint: null
+    label: null
+    output: null
+    rgb: D:\SIT_auto\SIT_deepethogram\DATA\SIT24-XBE-79-2-2025-04-1710-03-11\SIT24-XBE-79-2-2025-04-1710-03-11.mp4
+  SIT26-69B-80-1-2025-04-1710-41-04:
+    flow: null
+    key: SIT26-69B-80-1-2025-04-1710-41-04
+    keypoint: null
+    label: null
+    output: null
+    rgb: D:\SIT_auto\SIT_deepethogram\DATA\SIT26-69B-80-1-2025-04-1710-41-04\SIT26-69B-80-1-2025-04-1710-41-04.mp4
+  SIT3-CV4-78-3-2025-04-1509-42-29:
+    flow: null
+    key: SIT3-CV4-78-3-2025-04-1509-42-29
+    keypoint: null
+    label: null
+    output: null
+    rgb: D:\SIT_auto\SIT_deepethogram\DATA\SIT3-CV4-78-3-2025-04-1509-42-29\SIT3-CV4-78-3-2025-04-1509-42-29.mp4
+  SIT9-J1S-77-1-2025-04-1511-40-13:
+    flow: null
+    key: SIT9-J1S-77-1-2025-04-1511-40-13
+    keypoint: null
+    label: null
+    output: null
+    rgb: D:\SIT_auto\SIT_deepethogram\DATA\SIT9-J1S-77-1-2025-04-1511-40-13\SIT9-J1S-77-1-2025-04-1511-40-13.mp4
+  Sit11-CJ6-78-1-2025-04-1608-48-16:
+    flow: null
+    key: Sit11-CJ6-78-1-2025-04-1608-48-16
+    keypoint: null
+    label: null
+    output: null
+    rgb: D:\SIT_auto\SIT_deepethogram\DATA\Sit11-CJ6-78-1-2025-04-1608-48-16\Sit11-CJ6-78-1-2025-04-1608-48-16.mp4
+  Sit5-E4I-77-2-2025-04-1510-20-38:
+    flow: null
+    key: Sit5-E4I-77-2-2025-04-1510-20-38
+    keypoint: null
+    label: null
+    output: null
+    rgb: D:\SIT_auto\SIT_deepethogram\DATA\Sit5-E4I-77-2-2025-04-1510-20-38\Sit5-E4I-77-2-2025-04-1510-20-38.mp4
+val:
+  SIT19-6VT-77-1-2025-04-1611-17-34:
+    flow: null
+    key: SIT19-6VT-77-1-2025-04-1611-17-34
+    keypoint: null
+    label: D:\SIT_auto\SIT_deepethogram\DATA\SIT19-6VT-77-1-2025-04-1611-17-34\SIT19-6VT-77-1-2025-04-1611-17-34_labels.csv
+    output: null
+    rgb: D:\SIT_auto\SIT_deepethogram\DATA\SIT19-6VT-77-1-2025-04-1611-17-34\SIT19-6VT-77-1-2025-04-1611-17-34.mp4
+  SIT20-KUS-80-3-2025-04-1708-49-12:
+    flow: null
+    key: SIT20-KUS-80-3-2025-04-1708-49-12
+    keypoint: null
+    label: null
+    output: null
+    rgb: D:\SIT_auto\SIT_deepethogram\DATA\SIT20-KUS-80-3-2025-04-1708-49-12\SIT20-KUS-80-3-2025-04-1708-49-12.mp4
+  SIT7-H38-78-2-2025-04-1511-01-21:
+    flow: null
+    key: SIT7-H38-78-2-2025-04-1511-01-21
+    keypoint: null
+    label: null
+    output: null
+    rgb: D:\SIT_auto\SIT_deepethogram\DATA\SIT7-H38-78-2-2025-04-1511-01-21\SIT7-H38-78-2-2025-04-1511-01-21.mp4

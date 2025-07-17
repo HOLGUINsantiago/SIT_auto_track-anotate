@@ -1,0 +1,20 @@
+flow:
+  all: []
+  default: []
+key: SIT7-H38-78-2-2025-04-1511-01-21
+keypoint:
+  all: []
+  default: []
+label:
+  all: []
+  default: []
+output:
+  all: []
+  default: []
+rgb:
+  all:
+  - SIT7-H38-78-2-2025-04-1511-01-21.mp4
+  default: SIT7-H38-78-2-2025-04-1511-01-21.mp4
+stats:
+  all: []
+  default: []

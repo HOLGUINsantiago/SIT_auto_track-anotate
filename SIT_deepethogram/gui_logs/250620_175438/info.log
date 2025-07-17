@@ -1,0 +1,88 @@
+[2025-06-20 17:54:38,126] INFO [deepethogram.gui.main.initialize_project:1021] loaded project configuration: split:
+  reload: true
+  file: null
+  train_val_test:
+  - 0.8
+  - 0.2
+  - 0.0
+compute:
+  fp16: false
+  num_workers: 8
+  batch_size: 32
+  min_batch_size: 8
+  max_batch_size: 512
+  distributed: false
+  gpu_id: 0
+  dali: false
+  metrics_workers: 0
+reload:
+  overwrite_cfg: false
+  latest: false
+notes: null
+log:
+  level: info
+run:
+  type: gui
+  model: null
+  dir: D:\SIT_auto\SIT_deepethogram\gui_logs\250620_175438
+label_view_width: 31
+control_arrow_jump: 31
+vertical_arrow_jump: 3
+cmap: deepethogram
+unlabeled_alpha: 0.1
+prediction_opacity: 0.2
+postprocessor:
+  type: min_bout_per_behavior
+  min_bout_length: 1
+augs:
+  LR: 0.5
+  UD: 0.0
+  brightness: 0.25
+  contrast: 0.1
+  crop_size: null
+  degrees: 10
+  grayscale: 0.5
+  hue: 0.1
+  normalization:
+    'N': 128859033600
+    mean:
+    - 0.41397196180680806
+    - 0.3786093924361367
+    - 0.3517997653294114
+    std:
+    - 0.19307121274982786
+    - 0.19561545747257447
+    - 0.20004251676980772
+  pad: null
+  random_resize: false
+  resize:
+  - 224
+  - 224
+  saturation: 0.1
+project:
+  class_names:
+  - background
+  - Contactbyhost
+  - Contactbyvisitor
+  - Followbyhost
+  - Followbyvisitor
+  - Pawcontrol(host)
+  - Rearing
+  - Tailrattling
+  - Grooming
+  - Test
+  config_file: D:\SIT_auto\SIT_deepethogram\project_config.yaml
+  data_path: D:\SIT_auto\SIT_deepethogram\DATA
+  labeler: null
+  model_path: D:\SIT_auto\SIT_deepethogram\models
+  name: SIT
+  path: D:\SIT_auto\SIT_deepethogram
+  pretrained_path: pretrained_models
+sequence:
+  filter_length: 15
+train:
+  loss_weight_exp: 1.0
+
+[2025-06-20 17:54:38,136] INFO [deepethogram.gui.main.initialize_project:1022] cwd: D:\SIT_auto\SIT_deepethogram\gui_logs\250620_175438
+[2025-06-20 17:54:38,161] INFO [deepethogram.gui.main.project_loaded_buttons:175] Number finalized labels: 0
+[2025-06-20 17:54:38,234] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': None, 'output': None, 'rgb': 'D:\\SIT_auto\\SIT_deepethogram\\DATA\\SIT1-JNG-77-4-2025-04-1509-04-17\\SIT1-JNG-77-4-2025-04-1509-04-17.mp4', 'keypoint': None, 'key': 'SIT1-JNG-77-4-2025-04-1509-04-17'}

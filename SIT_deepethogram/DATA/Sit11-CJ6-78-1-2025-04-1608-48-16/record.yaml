@@ -1,0 +1,21 @@
+flow:
+  all: []
+  default: []
+key: Sit11-CJ6-78-1-2025-04-1608-48-16
+keypoint:
+  all: []
+  default: []
+label:
+  all: []
+  default: []
+output:
+  all: []
+  default: []
+rgb:
+  all:
+  - Sit11-CJ6-78-1-2025-04-1608-48-16.mp4
+  default: Sit11-CJ6-78-1-2025-04-1608-48-16.mp4
+stats:
+  all:
+  - stats.yaml
+  default: stats.yaml

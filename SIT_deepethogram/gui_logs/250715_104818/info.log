@@ -1,0 +1,209 @@
+[2025-07-15 10:48:18,276] INFO [deepethogram.gui.main.initialize_project:1021] loaded project configuration: split:
+  reload: true
+  file: null
+  train_val_test:
+  - 0.8
+  - 0.2
+  - 0.0
+compute:
+  fp16: false
+  num_workers: 8
+  batch_size: 32
+  min_batch_size: 8
+  max_batch_size: 512
+  distributed: false
+  gpu_id: 0
+  dali: false
+  metrics_workers: 0
+reload:
+  overwrite_cfg: false
+  latest: false
+notes: null
+log:
+  level: info
+run:
+  type: gui
+  model: null
+  dir: D:\SIT_auto\SIT_deepethogram\gui_logs\250715_104818
+label_view_width: 31
+control_arrow_jump: 31
+vertical_arrow_jump: 3
+cmap: deepethogram
+unlabeled_alpha: 0.1
+prediction_opacity: 0.2
+postprocessor:
+  type: min_bout_per_behavior
+  min_bout_length: 1
+augs:
+  LR: 0.5
+  UD: 0.0
+  brightness: 0.25
+  contrast: 0.1
+  crop_size: null
+  degrees: 10
+  grayscale: 0.5
+  hue: 0.1
+  normalization:
+    'N': 134573787500
+    mean:
+    - 0.4188662543741402
+    - 0.384645660879449
+    - 0.3572427996897448
+    std:
+    - 0.18899837086842783
+    - 0.1915122234643136
+    - 0.19592325647909137
+  pad: null
+  random_resize: false
+  resize:
+  - 224
+  - 224
+  saturation: 0.1
+project:
+  class_names:
+  - background
+  - Contactbyhost
+  - Contactbyvisitor
+  - Followbyhost
+  - Followbyvisitor
+  - Pawcontrol(host)
+  - Rearing
+  - Tailrattling
+  - Grooming
+  config_file: D:\SIT_auto\SIT_deepethogram\project_config.yaml
+  data_path: D:\SIT_auto\SIT_deepethogram\DATA
+  labeler: null
+  model_path: D:\SIT_auto\SIT_deepethogram\models
+  name: SIT
+  path: D:\SIT_auto\SIT_deepethogram
+  pretrained_path: D:\SIT_auto\SIT_deepethogram\models\pretrained_models
+sequence:
+  filter_length: 15
+train:
+  loss_weight_exp: 1.0
+
+[2025-07-15 10:48:18,276] INFO [deepethogram.gui.main.initialize_project:1022] cwd: D:\SIT_auto\SIT_deepethogram\gui_logs\250715_104818
+[2025-07-15 10:48:18,315] INFO [deepethogram.gui.main.project_loaded_buttons:175] Number finalized labels: 5
+[2025-07-15 10:48:19,415] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': None, 'output': None, 'rgb': 'D:\\SIT_auto\\SIT_deepethogram\\DATA\\SIT20-KUS-80-3-2025-04-1708-49-12\\SIT20-KUS-80-3-2025-04-1708-49-12.mp4', 'keypoint': None, 'key': 'SIT20-KUS-80-3-2025-04-1708-49-12'}
+[2025-07-15 10:48:23,321] INFO [deepethogram.gui.main.get_selected_models:1136] {'flow_generator': {'no pretrained weights': None, '200221_115158_TinyMotionNet': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200221_115158_TinyMotionNet\\checkpoint.pt'}, 'feature_extractor': {}, 'sequence': {'': None}}
+[2025-07-15 10:48:23,321] INFO [deepethogram.gui.main.flow_train:343] flow_train called with args: ['python', '-m', 'deepethogram.flow_generator.train', 'project.path=D:\\SIT_auto\\SIT_deepethogram', 'reload.weights=D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200221_115158_TinyMotionNet\\checkpoint.pt']
+[2025-07-15 10:51:24,687] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': 'D:/SIT_auto/SIT_deepethogram/DATA/SIT1-JNG-77-4-2025-04-1509-04-17\\SIT1-JNG-77-4-2025-04-1509-04-17_labels.csv', 'output': None, 'rgb': 'D:/SIT_auto/SIT_deepethogram/DATA/SIT1-JNG-77-4-2025-04-1509-04-17\\SIT1-JNG-77-4-2025-04-1509-04-17.mp4', 'keypoint': None, 'key': 'SIT1-JNG-77-4-2025-04-1509-04-17'}
+[2025-07-15 10:54:22,290] INFO [deepethogram.gui.main.finalize:771] finalizing labels for file D:/SIT_auto/SIT_deepethogram/DATA/SIT1-JNG-77-4-2025-04-1509-04-17/SIT1-JNG-77-4-2025-04-1509-04-17.mp4
+[2025-07-15 10:54:22,348] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': None, 'output': None, 'rgb': 'D:\\SIT_auto\\SIT_deepethogram\\DATA\\SIT22-TKX-80-5-2025-04-1709-27-09\\SIT22-TKX-80-5-2025-04-1709-27-09.mp4', 'keypoint': None, 'key': 'SIT22-TKX-80-5-2025-04-1709-27-09'}
+[2025-07-15 10:55:22,397] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-15 10:56:05,473] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
+[2025-07-15 10:57:15,816] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-15 11:00:07,698] INFO [deepethogram.gui.main.flow_train:353] Training finished. If you see error messages above, training did not complete successfully.
+[2025-07-15 11:00:07,698] INFO [deepethogram.gui.main.flow_train:359] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[2025-07-15 11:00:07,724] INFO [deepethogram.gui.main.project_loaded_buttons:175] Number finalized labels: 5
+[2025-07-15 11:00:18,479] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': 'D:/SIT_auto/SIT_deepethogram/DATA/SIT1-JNG-77-4-2025-04-1509-04-17\\SIT1-JNG-77-4-2025-04-1509-04-17_labels.csv', 'output': None, 'rgb': 'D:/SIT_auto/SIT_deepethogram/DATA/SIT1-JNG-77-4-2025-04-1509-04-17\\SIT1-JNG-77-4-2025-04-1509-04-17.mp4', 'keypoint': None, 'key': 'SIT1-JNG-77-4-2025-04-1509-04-17'}
+[2025-07-15 11:00:18,524] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
+[2025-07-15 11:02:07,476] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-15 11:03:04,846] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
+[2025-07-15 11:04:06,237] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-15 11:29:52,403] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
+[2025-07-15 11:31:07,166] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-15 11:31:39,478] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
+[2025-07-15 11:32:39,470] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-15 11:34:19,567] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
+[2025-07-15 11:34:28,798] INFO [deepethogram.gui.main.finalize:771] finalizing labels for file D:/SIT_auto/SIT_deepethogram/DATA/SIT1-JNG-77-4-2025-04-1509-04-17/SIT1-JNG-77-4-2025-04-1509-04-17.mp4
+[2025-07-15 11:34:28,867] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': None, 'output': None, 'rgb': 'D:\\SIT_auto\\SIT_deepethogram\\DATA\\SIT22-TKX-80-5-2025-04-1709-27-09\\SIT22-TKX-80-5-2025-04-1709-27-09.mp4', 'keypoint': None, 'key': 'SIT22-TKX-80-5-2025-04-1709-27-09'}
+[2025-07-15 11:35:14,877] INFO [deepethogram.gui.main.get_selected_models:1136] {'flow_generator': {'no pretrained weights': None, '200221_115158_TinyMotionNet': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200221_115158_TinyMotionNet\\checkpoint.pt'}, 'feature_extractor': {'no pretrained weights': None, '200415_125824_hidden_two_stream_kinetics_degf': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200415_125824_hidden_two_stream_kinetics_degf\\checkpoint.pt'}, 'sequence': {'': None}}
+[2025-07-15 11:35:14,879] INFO [deepethogram.gui.main.flow_train:343] flow_train called with args: ['python', '-m', 'deepethogram.flow_generator.train', 'project.path=D:\\SIT_auto\\SIT_deepethogram', 'reload.weights=D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200221_115158_TinyMotionNet\\checkpoint.pt']
+[2025-07-15 11:36:06,309] INFO [deepethogram.gui.main.finalize:771] finalizing labels for file D:\SIT_auto\SIT_deepethogram\DATA\SIT22-TKX-80-5-2025-04-1709-27-09\SIT22-TKX-80-5-2025-04-1709-27-09.mp4
+[2025-07-15 11:37:15,234] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-15 11:37:21,236] INFO [deepethogram.gui.main.finalize:771] finalizing labels for file D:\SIT_auto\SIT_deepethogram\DATA\SIT22-TKX-80-5-2025-04-1709-27-09\SIT22-TKX-80-5-2025-04-1709-27-09.mp4
+[2025-07-15 11:37:21,257] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
+[2025-07-15 11:37:21,289] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': None, 'output': None, 'rgb': 'D:\\SIT_auto\\SIT_deepethogram\\DATA\\SIT24-XBE-79-2-2025-04-1710-03-11\\SIT24-XBE-79-2-2025-04-1710-03-11.mp4', 'keypoint': None, 'key': 'SIT24-XBE-79-2-2025-04-1710-03-11'}
+[2025-07-15 11:37:39,091] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': 'D:/SIT_auto/SIT_deepethogram/DATA/SIT1-JNG-77-4-2025-04-1509-04-17\\SIT1-JNG-77-4-2025-04-1509-04-17_labels.csv', 'output': None, 'rgb': 'D:/SIT_auto/SIT_deepethogram/DATA/SIT1-JNG-77-4-2025-04-1509-04-17\\SIT1-JNG-77-4-2025-04-1509-04-17.mp4', 'keypoint': None, 'key': 'SIT1-JNG-77-4-2025-04-1509-04-17'}
+[2025-07-15 11:37:49,102] INFO [deepethogram.gui.main.get_selected_models:1136] {'flow_generator': {'no pretrained weights': None, '200221_115158_TinyMotionNet': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200221_115158_TinyMotionNet\\checkpoint.pt'}, 'feature_extractor': {'no pretrained weights': None, '200415_125824_hidden_two_stream_kinetics_degf': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200415_125824_hidden_two_stream_kinetics_degf\\checkpoint.pt'}, 'sequence': {'': None}}
+[2025-07-15 11:37:57,841] INFO [deepethogram.gui.main.finalize:771] finalizing labels for file D:/SIT_auto/SIT_deepethogram/DATA/SIT1-JNG-77-4-2025-04-1509-04-17/SIT1-JNG-77-4-2025-04-1509-04-17.mp4
+[2025-07-15 11:37:57,863] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': None, 'output': None, 'rgb': 'D:\\SIT_auto\\SIT_deepethogram\\DATA\\SIT26-69B-80-1-2025-04-1710-41-04\\SIT26-69B-80-1-2025-04-1710-41-04.mp4', 'keypoint': None, 'key': 'SIT26-69B-80-1-2025-04-1710-41-04'}
+[2025-07-15 11:38:02,140] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': None, 'output': None, 'rgb': 'D:/SIT_auto/SIT_deepethogram/DATA/SIT3-CV4-78-3-2025-04-1509-42-29\\SIT3-CV4-78-3-2025-04-1509-42-29.mp4', 'keypoint': None, 'key': 'SIT3-CV4-78-3-2025-04-1509-42-29'}
+[2025-07-15 11:38:17,700] INFO [deepethogram.gui.main.finalize:771] finalizing labels for file D:/SIT_auto/SIT_deepethogram/DATA/SIT3-CV4-78-3-2025-04-1509-42-29/SIT3-CV4-78-3-2025-04-1509-42-29.mp4
+[2025-07-15 11:38:17,733] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': 'D:\\SIT_auto\\SIT_deepethogram\\DATA\\SIT3-CV4-78-3-2025-04-1509-42-29\\SIT3-CV4-78-3-2025-04-1509-42-29_labels.csv', 'output': None, 'rgb': 'D:\\SIT_auto\\SIT_deepethogram\\DATA\\SIT3-CV4-78-3-2025-04-1509-42-29\\SIT3-CV4-78-3-2025-04-1509-42-29.mp4', 'keypoint': None, 'key': 'SIT3-CV4-78-3-2025-04-1509-42-29'}
+[2025-07-15 11:38:26,871] INFO [deepethogram.gui.main.finalize:771] finalizing labels for file D:\SIT_auto\SIT_deepethogram\DATA\SIT3-CV4-78-3-2025-04-1509-42-29\SIT3-CV4-78-3-2025-04-1509-42-29.mp4
+[2025-07-15 11:38:26,909] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': None, 'output': None, 'rgb': 'D:\\SIT_auto\\SIT_deepethogram\\DATA\\SIT7-H38-78-2-2025-04-1511-01-21\\SIT7-H38-78-2-2025-04-1511-01-21.mp4', 'keypoint': None, 'key': 'SIT7-H38-78-2-2025-04-1511-01-21'}
+[2025-07-15 11:38:32,254] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': None, 'output': None, 'rgb': 'D:/SIT_auto/SIT_deepethogram/DATA/Sit5-E4I-77-2-2025-04-1510-20-38\\Sit5-E4I-77-2-2025-04-1510-20-38.mp4', 'keypoint': None, 'key': 'Sit5-E4I-77-2-2025-04-1510-20-38'}
+[2025-07-15 11:38:44,402] INFO [deepethogram.gui.main.finalize:771] finalizing labels for file D:/SIT_auto/SIT_deepethogram/DATA/Sit5-E4I-77-2-2025-04-1510-20-38/Sit5-E4I-77-2-2025-04-1510-20-38.mp4
+[2025-07-15 11:38:44,434] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': None, 'output': None, 'rgb': 'D:\\SIT_auto\\SIT_deepethogram\\DATA\\SIT9-J1S-77-1-2025-04-1511-40-13\\SIT9-J1S-77-1-2025-04-1511-40-13.mp4', 'keypoint': None, 'key': 'SIT9-J1S-77-1-2025-04-1511-40-13'}
+[2025-07-15 11:38:52,419] INFO [deepethogram.gui.main.finalize:771] finalizing labels for file D:\SIT_auto\SIT_deepethogram\DATA\SIT9-J1S-77-1-2025-04-1511-40-13\SIT9-J1S-77-1-2025-04-1511-40-13.mp4
+[2025-07-15 11:38:52,451] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': None, 'output': None, 'rgb': 'D:\\SIT_auto\\SIT_deepethogram\\DATA\\Sit11-CJ6-78-1-2025-04-1608-48-16\\Sit11-CJ6-78-1-2025-04-1608-48-16.mp4', 'keypoint': None, 'key': 'Sit11-CJ6-78-1-2025-04-1608-48-16'}
+[2025-07-15 11:39:03,151] INFO [deepethogram.gui.main.finalize:771] finalizing labels for file D:\SIT_auto\SIT_deepethogram\DATA\Sit11-CJ6-78-1-2025-04-1608-48-16\Sit11-CJ6-78-1-2025-04-1608-48-16.mp4
+[2025-07-15 11:39:03,189] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': 'D:\\SIT_auto\\SIT_deepethogram\\DATA\\Sit5-E4I-77-2-2025-04-1510-20-38\\Sit5-E4I-77-2-2025-04-1510-20-38_labels.csv', 'output': None, 'rgb': 'D:\\SIT_auto\\SIT_deepethogram\\DATA\\Sit5-E4I-77-2-2025-04-1510-20-38\\Sit5-E4I-77-2-2025-04-1510-20-38.mp4', 'keypoint': None, 'key': 'Sit5-E4I-77-2-2025-04-1510-20-38'}
+[2025-07-15 11:39:16,417] INFO [deepethogram.gui.main.finalize:771] finalizing labels for file D:\SIT_auto\SIT_deepethogram\DATA\Sit5-E4I-77-2-2025-04-1510-20-38\Sit5-E4I-77-2-2025-04-1510-20-38.mp4
+[2025-07-15 11:39:22,088] INFO [deepethogram.gui.main.finalize:771] finalizing labels for file D:\SIT_auto\SIT_deepethogram\DATA\Sit5-E4I-77-2-2025-04-1510-20-38\Sit5-E4I-77-2-2025-04-1510-20-38.mp4
+[2025-07-15 11:40:22,560] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-15 12:00:47,083] INFO [deepethogram.gui.main.flow_train:353] Training finished. If you see error messages above, training did not complete successfully.
+[2025-07-15 12:00:47,085] INFO [deepethogram.gui.main.flow_train:359] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[2025-07-15 12:00:47,148] INFO [deepethogram.gui.main.project_loaded_buttons:175] Number finalized labels: 10
+[2025-07-15 12:01:15,443] INFO [deepethogram.gui.main.get_selected_models:1136] {'flow_generator': {'no pretrained weights': None, '200221_115158_TinyMotionNet': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200221_115158_TinyMotionNet\\checkpoint.pt', '250715_113518_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_113518_flow_generator_train\\lightning_checkpoints\\epoch=0-step=999.ckpt'}, 'feature_extractor': {'no pretrained weights': None, '200415_125824_hidden_two_stream_kinetics_degf': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200415_125824_hidden_two_stream_kinetics_degf\\checkpoint.pt'}, 'sequence': {'': None}}
+[2025-07-15 12:01:15,443] INFO [deepethogram.gui.main.flow_train:343] flow_train called with args: ['python', '-m', 'deepethogram.flow_generator.train', 'project.path=D:\\SIT_auto\\SIT_deepethogram', 'reload.weights=D:\\SIT_auto\\SIT_deepethogram\\models\\250715_113518_flow_generator_train\\lightning_checkpoints\\epoch=0-step=999.ckpt']
+[2025-07-15 12:01:15,671] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
+[2025-07-15 12:02:15,675] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-15 12:37:59,891] INFO [deepethogram.gui.main.flow_train:353] Training finished. If you see error messages above, training did not complete successfully.
+[2025-07-15 12:37:59,892] INFO [deepethogram.gui.main.flow_train:359] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[2025-07-15 12:37:59,955] INFO [deepethogram.gui.main.project_loaded_buttons:175] Number finalized labels: 10
+[2025-07-15 12:42:45,009] INFO [deepethogram.gui.main.get_selected_models:1136] {'flow_generator': {'no pretrained weights': None, '200221_115158_TinyMotionNet': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200221_115158_TinyMotionNet\\checkpoint.pt', '250715_113518_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_113518_flow_generator_train\\lightning_checkpoints\\epoch=0-step=999.ckpt', '250715_120117_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_120117_flow_generator_train\\lightning_checkpoints\\epoch=1-step=1999.ckpt'}, 'feature_extractor': {'no pretrained weights': None, '200415_125824_hidden_two_stream_kinetics_degf': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200415_125824_hidden_two_stream_kinetics_degf\\checkpoint.pt'}, 'sequence': {'': None}}
+[2025-07-15 12:42:45,009] INFO [deepethogram.gui.main.get_selected_models:1136] {'flow_generator': {'no pretrained weights': None, '200221_115158_TinyMotionNet': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200221_115158_TinyMotionNet\\checkpoint.pt', '250715_113518_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_113518_flow_generator_train\\lightning_checkpoints\\epoch=0-step=999.ckpt', '250715_120117_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_120117_flow_generator_train\\lightning_checkpoints\\epoch=1-step=1999.ckpt'}, 'feature_extractor': {'no pretrained weights': None, '200415_125824_hidden_two_stream_kinetics_degf': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200415_125824_hidden_two_stream_kinetics_degf\\checkpoint.pt'}, 'sequence': {'': None}}
+[2025-07-15 12:42:45,009] INFO [deepethogram.gui.main.get_selected_models:1136] {'flow_generator': {'no pretrained weights': None, '200221_115158_TinyMotionNet': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200221_115158_TinyMotionNet\\checkpoint.pt', '250715_113518_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_113518_flow_generator_train\\lightning_checkpoints\\epoch=0-step=999.ckpt', '250715_120117_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_120117_flow_generator_train\\lightning_checkpoints\\epoch=1-step=1999.ckpt'}, 'feature_extractor': {'no pretrained weights': None, '200415_125824_hidden_two_stream_kinetics_degf': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200415_125824_hidden_two_stream_kinetics_degf\\checkpoint.pt'}, 'sequence': {'': None}}
+[2025-07-15 12:42:45,009] INFO [deepethogram.gui.main.featureextractor_train:385] feature extractor train called with args: ['python', '-m', 'deepethogram.feature_extractor.train', 'project.path=D:\\SIT_auto\\SIT_deepethogram', 'feature_extractor.weights=D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200415_125824_hidden_two_stream_kinetics_degf\\checkpoint.pt', 'flow_generator.weights=D:\\SIT_auto\\SIT_deepethogram\\models\\250715_120117_flow_generator_train\\lightning_checkpoints\\epoch=1-step=1999.ckpt']
+[2025-07-15 12:42:45,837] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
+[2025-07-15 12:43:45,836] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-15 13:32:41,917] INFO [deepethogram.gui.main.featureextractor_train:395] Training finished. If you see error messages above, training did not complete successfully.
+[2025-07-15 13:32:41,917] INFO [deepethogram.gui.main.featureextractor_train:400] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[2025-07-15 13:32:41,995] INFO [deepethogram.gui.main.project_loaded_buttons:175] Number finalized labels: 10
+[2025-07-15 14:03:24,659] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
+[2025-07-15 14:04:26,111] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-15 14:06:08,673] INFO [deepethogram.gui.main.get_selected_models:1136] {'flow_generator': {'no pretrained weights': None, '200221_115158_TinyMotionNet': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200221_115158_TinyMotionNet\\checkpoint.pt', '250715_113518_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_113518_flow_generator_train\\lightning_checkpoints\\epoch=0-step=999.ckpt', '250715_120117_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_120117_flow_generator_train\\lightning_checkpoints\\epoch=1-step=1999.ckpt'}, 'feature_extractor': {'no pretrained weights': None, '200415_125824_hidden_two_stream_kinetics_degf': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200415_125824_hidden_two_stream_kinetics_degf\\checkpoint.pt', '250715_124246_feature_extractor_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_124246_feature_extractor_train\\lightning_checkpoints\\epoch=13-step=8283.ckpt'}, 'sequence': {'': None}}
+[2025-07-15 14:06:08,673] INFO [deepethogram.gui.main.get_selected_models:1136] {'flow_generator': {'no pretrained weights': None, '200221_115158_TinyMotionNet': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200221_115158_TinyMotionNet\\checkpoint.pt', '250715_113518_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_113518_flow_generator_train\\lightning_checkpoints\\epoch=0-step=999.ckpt', '250715_120117_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_120117_flow_generator_train\\lightning_checkpoints\\epoch=1-step=1999.ckpt'}, 'feature_extractor': {'no pretrained weights': None, '200415_125824_hidden_two_stream_kinetics_degf': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200415_125824_hidden_two_stream_kinetics_degf\\checkpoint.pt', '250715_124246_feature_extractor_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_124246_feature_extractor_train\\lightning_checkpoints\\epoch=13-step=8283.ckpt'}, 'sequence': {'': None}}
+[2025-07-15 14:06:08,673] INFO [deepethogram.gui.main.featureextractor_infer:452] inference running with args: python -m deepethogram.feature_extractor.inference project.path=D:\SIT_auto\SIT_deepethogram inference.overwrite=True feature_extractor.weights=D:\SIT_auto\SIT_deepethogram\models\250715_124246_feature_extractor_train\lightning_checkpoints\epoch=13-step=8283.ckpt flow_generator.weights=D:\SIT_auto\SIT_deepethogram\models\250715_120117_flow_generator_train\lightning_checkpoints\epoch=1-step=1999.ckpt inference.directory_list=[D:\SIT_auto\SIT_deepethogram\DATA\SIT1-JNG-77-4-2025-04-1509-04-17,D:\SIT_auto\SIT_deepethogram\DATA\SIT13-KU2-78-3-2025-04-1609-26-39,D:\SIT_auto\SIT_deepethogram\DATA\SIT15-DOA-77-3-2025-04-1610-03-51,D:\SIT_auto\SIT_deepethogram\DATA\SIT17-BQ9-78-2-2025-04-1610-40-34,D:\SIT_auto\SIT_deepethogram\DATA\SIT19-6VT-77-1-2025-04-1611-17-34,D:\SIT_auto\SIT_deepethogram\DATA\SIT20-KUS-80-3-2025-04-1708-49-12,D:\SIT_auto\SIT_deepethogram\DATA\SIT22-TKX-80-5-2025-04-1709-27-09,D:\SIT_auto\SIT_deepethogram\DATA\SIT24-XBE-79-2-2025-04-1710-03-11,D:\SIT_auto\SIT_deepethogram\DATA\SIT26-69B-80-1-2025-04-1710-41-04,D:\SIT_auto\SIT_deepethogram\DATA\SIT3-CV4-78-3-2025-04-1509-42-29,D:\SIT_auto\SIT_deepethogram\DATA\SIT7-H38-78-2-2025-04-1511-01-21,D:\SIT_auto\SIT_deepethogram\DATA\SIT9-J1S-77-1-2025-04-1511-40-13,D:\SIT_auto\SIT_deepethogram\DATA\Sit11-CJ6-78-1-2025-04-1608-48-16,D:\SIT_auto\SIT_deepethogram\DATA\Sit5-E4I-77-2-2025-04-1510-20-38]
+[2025-07-15 14:06:13,722] INFO [deepethogram.gui.main.featureextractor_infer:463] Inference finished. If you see error messages above, inference did not complete successfully.
+[2025-07-15 14:06:13,722] INFO [deepethogram.gui.main.featureextractor_infer:468] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[2025-07-15 14:06:13,783] INFO [deepethogram.gui.main.project_loaded_buttons:175] Number finalized labels: 10
+[2025-07-15 14:06:14,310] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
+[2025-07-15 14:07:14,328] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-15 14:07:56,296] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
+[2025-07-15 14:08:56,311] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-15 14:15:14,946] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
+[2025-07-15 14:15:20,259] INFO [deepethogram.gui.main.get_selected_models:1136] {'flow_generator': {'no pretrained weights': None, '200221_115158_TinyMotionNet': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200221_115158_TinyMotionNet\\checkpoint.pt', '250715_113518_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_113518_flow_generator_train\\lightning_checkpoints\\epoch=0-step=999.ckpt', '250715_120117_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_120117_flow_generator_train\\lightning_checkpoints\\epoch=1-step=1999.ckpt'}, 'feature_extractor': {'no pretrained weights': None, '200415_125824_hidden_two_stream_kinetics_degf': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200415_125824_hidden_two_stream_kinetics_degf\\checkpoint.pt', '250715_124246_feature_extractor_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_124246_feature_extractor_train\\lightning_checkpoints\\epoch=13-step=8283.ckpt'}, 'sequence': {'': None}}
+[2025-07-15 14:15:20,259] INFO [deepethogram.gui.main.get_selected_models:1136] {'flow_generator': {'no pretrained weights': None, '200221_115158_TinyMotionNet': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200221_115158_TinyMotionNet\\checkpoint.pt', '250715_113518_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_113518_flow_generator_train\\lightning_checkpoints\\epoch=0-step=999.ckpt', '250715_120117_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_120117_flow_generator_train\\lightning_checkpoints\\epoch=1-step=1999.ckpt'}, 'feature_extractor': {'no pretrained weights': None, '200415_125824_hidden_two_stream_kinetics_degf': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200415_125824_hidden_two_stream_kinetics_degf\\checkpoint.pt', '250715_124246_feature_extractor_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_124246_feature_extractor_train\\lightning_checkpoints\\epoch=13-step=8283.ckpt'}, 'sequence': {'': None}}
+[2025-07-15 14:15:20,259] INFO [deepethogram.gui.main.get_selected_models:1136] {'flow_generator': {'no pretrained weights': None, '200221_115158_TinyMotionNet': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200221_115158_TinyMotionNet\\checkpoint.pt', '250715_113518_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_113518_flow_generator_train\\lightning_checkpoints\\epoch=0-step=999.ckpt', '250715_120117_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_120117_flow_generator_train\\lightning_checkpoints\\epoch=1-step=1999.ckpt'}, 'feature_extractor': {'no pretrained weights': None, '200415_125824_hidden_two_stream_kinetics_degf': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200415_125824_hidden_two_stream_kinetics_degf\\checkpoint.pt', '250715_124246_feature_extractor_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_124246_feature_extractor_train\\lightning_checkpoints\\epoch=13-step=8283.ckpt'}, 'sequence': {'': None}}
+[2025-07-15 14:15:20,274] INFO [deepethogram.gui.main.featureextractor_train:385] feature extractor train called with args: ['python', '-m', 'deepethogram.feature_extractor.train', 'project.path=D:\\SIT_auto\\SIT_deepethogram', 'feature_extractor.weights=D:\\SIT_auto\\SIT_deepethogram\\models\\250715_124246_feature_extractor_train\\lightning_checkpoints\\epoch=13-step=8283.ckpt', 'flow_generator.weights=D:\\SIT_auto\\SIT_deepethogram\\models\\250715_120117_flow_generator_train\\lightning_checkpoints\\epoch=1-step=1999.ckpt']
+[2025-07-15 14:16:20,492] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-15 14:52:03,537] INFO [deepethogram.gui.main.featureextractor_train:395] Training finished. If you see error messages above, training did not complete successfully.
+[2025-07-15 14:52:03,537] INFO [deepethogram.gui.main.featureextractor_train:400] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[2025-07-15 14:52:03,607] INFO [deepethogram.gui.main.project_loaded_buttons:175] Number finalized labels: 10
+[2025-07-15 14:52:19,324] INFO [deepethogram.gui.main.get_selected_models:1136] {'flow_generator': {'no pretrained weights': None, '200221_115158_TinyMotionNet': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200221_115158_TinyMotionNet\\checkpoint.pt', '250715_113518_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_113518_flow_generator_train\\lightning_checkpoints\\epoch=0-step=999.ckpt', '250715_120117_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_120117_flow_generator_train\\lightning_checkpoints\\epoch=1-step=1999.ckpt'}, 'feature_extractor': {'no pretrained weights': None, '200415_125824_hidden_two_stream_kinetics_degf': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200415_125824_hidden_two_stream_kinetics_degf\\checkpoint.pt', '250715_124246_feature_extractor_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_124246_feature_extractor_train\\lightning_checkpoints\\epoch=13-step=8283.ckpt', '250715_141521_feature_extractor_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_141521_feature_extractor_train\\lightning_checkpoints\\epoch=0-step=999.ckpt'}, 'sequence': {'': None}}
+[2025-07-15 14:52:19,324] INFO [deepethogram.gui.main.get_selected_models:1136] {'flow_generator': {'no pretrained weights': None, '200221_115158_TinyMotionNet': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200221_115158_TinyMotionNet\\checkpoint.pt', '250715_113518_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_113518_flow_generator_train\\lightning_checkpoints\\epoch=0-step=999.ckpt', '250715_120117_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_120117_flow_generator_train\\lightning_checkpoints\\epoch=1-step=1999.ckpt'}, 'feature_extractor': {'no pretrained weights': None, '200415_125824_hidden_two_stream_kinetics_degf': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200415_125824_hidden_two_stream_kinetics_degf\\checkpoint.pt', '250715_124246_feature_extractor_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_124246_feature_extractor_train\\lightning_checkpoints\\epoch=13-step=8283.ckpt', '250715_141521_feature_extractor_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_141521_feature_extractor_train\\lightning_checkpoints\\epoch=0-step=999.ckpt'}, 'sequence': {'': None}}
+[2025-07-15 14:52:19,324] INFO [deepethogram.gui.main.featureextractor_infer:452] inference running with args: python -m deepethogram.feature_extractor.inference project.path=D:\SIT_auto\SIT_deepethogram inference.overwrite=True feature_extractor.weights=D:\SIT_auto\SIT_deepethogram\models\250715_141521_feature_extractor_train\lightning_checkpoints\epoch=0-step=999.ckpt flow_generator.weights=D:\SIT_auto\SIT_deepethogram\models\250715_120117_flow_generator_train\lightning_checkpoints\epoch=1-step=1999.ckpt inference.directory_list=[D:\SIT_auto\SIT_deepethogram\DATA\SIT1-JNG-77-4-2025-04-1509-04-17,D:\SIT_auto\SIT_deepethogram\DATA\SIT13-KU2-78-3-2025-04-1609-26-39,D:\SIT_auto\SIT_deepethogram\DATA\SIT15-DOA-77-3-2025-04-1610-03-51,D:\SIT_auto\SIT_deepethogram\DATA\SIT17-BQ9-78-2-2025-04-1610-40-34,D:\SIT_auto\SIT_deepethogram\DATA\SIT19-6VT-77-1-2025-04-1611-17-34,D:\SIT_auto\SIT_deepethogram\DATA\SIT20-KUS-80-3-2025-04-1708-49-12,D:\SIT_auto\SIT_deepethogram\DATA\SIT22-TKX-80-5-2025-04-1709-27-09,D:\SIT_auto\SIT_deepethogram\DATA\SIT24-XBE-79-2-2025-04-1710-03-11,D:\SIT_auto\SIT_deepethogram\DATA\SIT26-69B-80-1-2025-04-1710-41-04,D:\SIT_auto\SIT_deepethogram\DATA\SIT3-CV4-78-3-2025-04-1509-42-29,D:\SIT_auto\SIT_deepethogram\DATA\SIT7-H38-78-2-2025-04-1511-01-21,D:\SIT_auto\SIT_deepethogram\DATA\SIT9-J1S-77-1-2025-04-1511-40-13,D:\SIT_auto\SIT_deepethogram\DATA\Sit11-CJ6-78-1-2025-04-1608-48-16,D:\SIT_auto\SIT_deepethogram\DATA\Sit5-E4I-77-2-2025-04-1510-20-38]
+[2025-07-15 14:52:19,964] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
+[2025-07-15 14:53:35,643] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-15 15:02:01,973] INFO [deepethogram.gui.main.featureextractor_infer:463] Inference finished. If you see error messages above, inference did not complete successfully.
+[2025-07-15 15:02:01,973] INFO [deepethogram.gui.main.featureextractor_infer:468] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[2025-07-15 15:02:02,036] INFO [deepethogram.gui.main.project_loaded_buttons:175] Number finalized labels: 10
+[2025-07-15 15:02:02,707] INFO [deepethogram.projects.import_outputfile:791] Key used to load outputfile: resnet18
+[2025-07-15 15:02:02,834] INFO [deepethogram.gui.main.import_outputfile:886] CHANGING LATENT NAME TO : resnet18
+[2025-07-15 15:02:02,834] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
+[2025-07-15 15:03:02,823] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-15 15:03:34,644] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
+[2025-07-15 15:03:58,232] INFO [deepethogram.gui.main.get_selected_models:1136] {'flow_generator': {'no pretrained weights': None, '200221_115158_TinyMotionNet': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200221_115158_TinyMotionNet\\checkpoint.pt', '250715_113518_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_113518_flow_generator_train\\lightning_checkpoints\\epoch=0-step=999.ckpt', '250715_120117_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_120117_flow_generator_train\\lightning_checkpoints\\epoch=1-step=1999.ckpt'}, 'feature_extractor': {'no pretrained weights': None, '200415_125824_hidden_two_stream_kinetics_degf': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200415_125824_hidden_two_stream_kinetics_degf\\checkpoint.pt', '250715_124246_feature_extractor_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_124246_feature_extractor_train\\lightning_checkpoints\\epoch=13-step=8283.ckpt', '250715_141521_feature_extractor_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_141521_feature_extractor_train\\lightning_checkpoints\\epoch=0-step=999.ckpt'}, 'sequence': {'': None}}
+[2025-07-15 15:04:13,409] INFO [deepethogram.gui.main.sequence_train:501] Training finished. If you see error messages above, training did not complete successfully.
+[2025-07-15 15:04:13,409] INFO [deepethogram.gui.main.sequence_train:506] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[2025-07-15 15:04:13,473] INFO [deepethogram.gui.main.project_loaded_buttons:175] Number finalized labels: 10
+[2025-07-15 15:04:37,909] INFO [deepethogram.gui.main.get_selected_models:1136] {'flow_generator': {'no pretrained weights': None, '200221_115158_TinyMotionNet': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200221_115158_TinyMotionNet\\checkpoint.pt', '250715_113518_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_113518_flow_generator_train\\lightning_checkpoints\\epoch=0-step=999.ckpt', '250715_120117_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_120117_flow_generator_train\\lightning_checkpoints\\epoch=1-step=1999.ckpt'}, 'feature_extractor': {'no pretrained weights': None, '200415_125824_hidden_two_stream_kinetics_degf': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200415_125824_hidden_two_stream_kinetics_degf\\checkpoint.pt', '250715_124246_feature_extractor_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_124246_feature_extractor_train\\lightning_checkpoints\\epoch=13-step=8283.ckpt', '250715_141521_feature_extractor_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_141521_feature_extractor_train\\lightning_checkpoints\\epoch=0-step=999.ckpt'}, 'sequence': {'': None, 'no pretrained weights': None, '250715_150359_sequence_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_150359_sequence_train\\lightning_checkpoints\\last.ckpt'}}
+[2025-07-15 15:04:47,020] INFO [deepethogram.gui.main.sequence_train:501] Training finished. If you see error messages above, training did not complete successfully.
+[2025-07-15 15:04:47,020] INFO [deepethogram.gui.main.sequence_train:506] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[2025-07-15 15:04:47,059] INFO [deepethogram.gui.main.project_loaded_buttons:175] Number finalized labels: 10
+[2025-07-15 15:05:17,361] INFO [deepethogram.gui.main.get_selected_models:1136] {'flow_generator': {'no pretrained weights': None, '200221_115158_TinyMotionNet': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200221_115158_TinyMotionNet\\checkpoint.pt', '250715_113518_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_113518_flow_generator_train\\lightning_checkpoints\\epoch=0-step=999.ckpt', '250715_120117_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_120117_flow_generator_train\\lightning_checkpoints\\epoch=1-step=1999.ckpt'}, 'feature_extractor': {'no pretrained weights': None, '200415_125824_hidden_two_stream_kinetics_degf': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200415_125824_hidden_two_stream_kinetics_degf\\checkpoint.pt', '250715_124246_feature_extractor_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_124246_feature_extractor_train\\lightning_checkpoints\\epoch=13-step=8283.ckpt', '250715_141521_feature_extractor_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_141521_feature_extractor_train\\lightning_checkpoints\\epoch=0-step=999.ckpt'}, 'sequence': {'': None, 'no pretrained weights': None, '250715_150359_sequence_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_150359_sequence_train\\lightning_checkpoints\\last.ckpt'}}
+[2025-07-15 15:05:25,455] INFO [deepethogram.gui.main.sequence_train:501] Training finished. If you see error messages above, training did not complete successfully.
+[2025-07-15 15:05:25,455] INFO [deepethogram.gui.main.sequence_train:506] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[2025-07-15 15:05:25,522] INFO [deepethogram.gui.main.project_loaded_buttons:175] Number finalized labels: 10
+[2025-07-15 15:05:43,455] INFO [deepethogram.gui.main.get_selected_models:1136] {'flow_generator': {'no pretrained weights': None, '200221_115158_TinyMotionNet': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200221_115158_TinyMotionNet\\checkpoint.pt', '250715_113518_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_113518_flow_generator_train\\lightning_checkpoints\\epoch=0-step=999.ckpt', '250715_120117_flow_generator_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_120117_flow_generator_train\\lightning_checkpoints\\epoch=1-step=1999.ckpt'}, 'feature_extractor': {'no pretrained weights': None, '200415_125824_hidden_two_stream_kinetics_degf': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models\\200415_125824_hidden_two_stream_kinetics_degf\\checkpoint.pt', '250715_124246_feature_extractor_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_124246_feature_extractor_train\\lightning_checkpoints\\epoch=13-step=8283.ckpt', '250715_141521_feature_extractor_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_141521_feature_extractor_train\\lightning_checkpoints\\epoch=0-step=999.ckpt'}, 'sequence': {'': None, 'no pretrained weights': None, '250715_150359_sequence_train': 'D:\\SIT_auto\\SIT_deepethogram\\models\\250715_150359_sequence_train\\lightning_checkpoints\\last.ckpt'}}
+[2025-07-15 15:05:55,611] INFO [deepethogram.gui.main.sequence_train:501] Training finished. If you see error messages above, training did not complete successfully.
+[2025-07-15 15:05:55,611] INFO [deepethogram.gui.main.sequence_train:506] ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[2025-07-15 15:05:55,678] INFO [deepethogram.gui.main.project_loaded_buttons:175] Number finalized labels: 10
+[2025-07-15 15:06:02,892] INFO [deepethogram.gui.main.initialize_project:1017] cwd: D:\SIT_auto\SIT_deepethogram\gui_logs\250715_104818
+[2025-07-15 15:06:02,892] INFO [deepethogram.projects.convert_config_paths_to_absolute:1137] cwd in absolute: D:\SIT_auto\SIT_deepethogram\gui_logs\250715_104818
+[2025-07-15 15:06:02,892] INFO [deepethogram.projects.convert_config_paths_to_absolute:1180] after absolute: {'class_names': ['background', 'Contactbyhost', 'Contactbyvisitor', 'Followbyhost', 'Followbyvisitor', 'Pawcontrol(host)', 'Rearing', 'Tailrattling', 'Grooming'], 'config_file': 'D:\\SIT_auto\\SIT_deepethogram\\project_config.yaml', 'data_path': 'D:\\SIT_auto\\SIT_deepethogram\\DATA', 'labeler': None, 'model_path': 'D:\\SIT_auto\\SIT_deepethogram\\models', 'name': 'SIT', 'path': 'D:\\SIT_auto\\SIT_deepethogram', 'pretrained_path': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models'}
+[2025-07-15 15:06:02,892] INFO [deepethogram.gui.main.initialize_project:1019] cwd: D:\SIT_auto\SIT_deepethogram\gui_logs\250715_104818

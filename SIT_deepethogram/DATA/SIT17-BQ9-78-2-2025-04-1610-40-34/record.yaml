@@ -1,0 +1,22 @@
+flow:
+  all: []
+  default: []
+key: SIT17-BQ9-78-2-2025-04-1610-40-34
+keypoint:
+  all: []
+  default: []
+label:
+  all:
+  - SIT17-BQ9-78-2-2025-04-1610-40-34_labels.csv
+  default: SIT17-BQ9-78-2-2025-04-1610-40-34_labels.csv
+output:
+  all: []
+  default: []
+rgb:
+  all:
+  - SIT17-BQ9-78-2-2025-04-1610-40-34.mp4
+  default: SIT17-BQ9-78-2-2025-04-1610-40-34.mp4
+stats:
+  all:
+  - stats.yaml
+  default: stats.yaml

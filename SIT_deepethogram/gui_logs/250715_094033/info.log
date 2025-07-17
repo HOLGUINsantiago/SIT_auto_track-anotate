@@ -1,0 +1,119 @@
+[2025-07-15 09:40:33,839] INFO [deepethogram.gui.main.initialize_project:1021] loaded project configuration: split:
+  reload: true
+  file: null
+  train_val_test:
+  - 0.8
+  - 0.2
+  - 0.0
+compute:
+  fp16: false
+  num_workers: 8
+  batch_size: 32
+  min_batch_size: 8
+  max_batch_size: 512
+  distributed: false
+  gpu_id: 0
+  dali: false
+  metrics_workers: 0
+reload:
+  overwrite_cfg: false
+  latest: false
+notes: null
+log:
+  level: info
+run:
+  type: gui
+  model: null
+  dir: D:\SIT_auto\SIT_deepethogram\gui_logs\250715_094033
+label_view_width: 31
+control_arrow_jump: 31
+vertical_arrow_jump: 3
+cmap: deepethogram
+unlabeled_alpha: 0.1
+prediction_opacity: 0.2
+postprocessor:
+  type: min_bout_per_behavior
+  min_bout_length: 1
+augs:
+  LR: 0.5
+  UD: 0.0
+  brightness: 0.25
+  contrast: 0.1
+  crop_size: null
+  degrees: 10
+  grayscale: 0.5
+  hue: 0.1
+  normalization:
+    'N': 134573787500
+    mean:
+    - 0.4188662543741402
+    - 0.384645660879449
+    - 0.3572427996897448
+    std:
+    - 0.18899837086842783
+    - 0.1915122234643136
+    - 0.19592325647909137
+  pad: null
+  random_resize: false
+  resize:
+  - 224
+  - 224
+  saturation: 0.1
+project:
+  class_names:
+  - background
+  - Contactbyhost
+  - Contactbyvisitor
+  - Followbyhost
+  - Followbyvisitor
+  - Pawcontrol(host)
+  - Rearing
+  - Tailrattling
+  - Grooming
+  - Test
+  config_file: D:\SIT_auto\SIT_deepethogram\project_config.yaml
+  data_path: D:\SIT_auto\SIT_deepethogram\DATA
+  labeler: null
+  model_path: D:\SIT_auto\SIT_deepethogram\models
+  name: SIT
+  path: D:\SIT_auto\SIT_deepethogram
+  pretrained_path: pretrained_models
+sequence:
+  filter_length: 15
+train:
+  loss_weight_exp: 1.0
+
+[2025-07-15 09:40:33,840] INFO [deepethogram.gui.main.initialize_project:1022] cwd: D:\SIT_auto\SIT_deepethogram\gui_logs\250715_094033
+[2025-07-15 09:40:33,894] INFO [deepethogram.gui.main.project_loaded_buttons:175] Number finalized labels: 0
+[2025-07-15 09:40:33,931] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': None, 'output': None, 'rgb': 'D:\\SIT_auto\\SIT_deepethogram\\DATA\\SIT1-JNG-77-4-2025-04-1509-04-17\\SIT1-JNG-77-4-2025-04-1509-04-17.mp4', 'keypoint': None, 'key': 'SIT1-JNG-77-4-2025-04-1509-04-17'}
+[2025-07-15 09:43:14,142] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-15 09:44:37,793] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
+[2025-07-15 09:45:47,290] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-15 09:46:50,878] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
+[2025-07-15 09:48:23,716] INFO [deepethogram.gui.main.finalize:771] finalizing labels for file D:\SIT_auto\SIT_deepethogram\DATA\SIT1-JNG-77-4-2025-04-1509-04-17\SIT1-JNG-77-4-2025-04-1509-04-17.mp4
+[2025-07-15 09:48:23,748] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': None, 'output': None, 'rgb': 'D:\\SIT_auto\\SIT_deepethogram\\DATA\\SIT13-KU2-78-3-2025-04-1609-26-39\\SIT13-KU2-78-3-2025-04-1609-26-39.mp4', 'keypoint': None, 'key': 'SIT13-KU2-78-3-2025-04-1609-26-39'}
+[2025-07-15 09:49:13,570] INFO [deepethogram.gui.main.finalize:771] finalizing labels for file D:\SIT_auto\SIT_deepethogram\DATA\SIT13-KU2-78-3-2025-04-1609-26-39\SIT13-KU2-78-3-2025-04-1609-26-39.mp4
+[2025-07-15 09:49:13,622] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': None, 'output': None, 'rgb': 'D:\\SIT_auto\\SIT_deepethogram\\DATA\\SIT15-DOA-77-3-2025-04-1610-03-51\\SIT15-DOA-77-3-2025-04-1610-03-51.mp4', 'keypoint': None, 'key': 'SIT15-DOA-77-3-2025-04-1610-03-51'}
+[2025-07-15 09:49:38,563] INFO [deepethogram.gui.main.finalize:771] finalizing labels for file D:\SIT_auto\SIT_deepethogram\DATA\SIT15-DOA-77-3-2025-04-1610-03-51\SIT15-DOA-77-3-2025-04-1610-03-51.mp4
+[2025-07-15 09:49:38,615] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': None, 'output': None, 'rgb': 'D:\\SIT_auto\\SIT_deepethogram\\DATA\\SIT17-BQ9-78-2-2025-04-1610-40-34\\SIT17-BQ9-78-2-2025-04-1610-40-34.mp4', 'keypoint': None, 'key': 'SIT17-BQ9-78-2-2025-04-1610-40-34'}
+[2025-07-15 09:52:23,656] INFO [deepethogram.gui.main.save:800] saving...
+[2025-07-15 09:52:23,688] INFO [deepethogram.gui.main.finalize:771] finalizing labels for file D:\SIT_auto\SIT_deepethogram\DATA\SIT17-BQ9-78-2-2025-04-1610-40-34\SIT17-BQ9-78-2-2025-04-1610-40-34.mp4
+[2025-07-15 09:52:23,716] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': None, 'output': None, 'rgb': 'D:\\SIT_auto\\SIT_deepethogram\\DATA\\SIT19-6VT-77-1-2025-04-1611-17-34\\SIT19-6VT-77-1-2025-04-1611-17-34.mp4', 'keypoint': None, 'key': 'SIT19-6VT-77-1-2025-04-1611-17-34'}
+[2025-07-15 09:52:49,169] INFO [deepethogram.gui.main.finalize:771] finalizing labels for file D:\SIT_auto\SIT_deepethogram\DATA\SIT19-6VT-77-1-2025-04-1611-17-34\SIT19-6VT-77-1-2025-04-1611-17-34.mp4
+[2025-07-15 09:52:49,220] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': None, 'output': None, 'rgb': 'D:\\SIT_auto\\SIT_deepethogram\\DATA\\SIT20-KUS-80-3-2025-04-1708-49-12\\SIT20-KUS-80-3-2025-04-1708-49-12.mp4', 'keypoint': None, 'key': 'SIT20-KUS-80-3-2025-04-1708-49-12'}
+[2025-07-15 09:54:41,928] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-15 09:54:52,928] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
+[2025-07-15 09:56:01,613] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': 'D:/SIT_auto/SIT_deepethogram/DATA/SIT1-JNG-77-4-2025-04-1509-04-17\\SIT1-JNG-77-4-2025-04-1509-04-17_labels.csv', 'output': None, 'rgb': 'D:/SIT_auto/SIT_deepethogram/DATA/SIT1-JNG-77-4-2025-04-1509-04-17\\SIT1-JNG-77-4-2025-04-1509-04-17.mp4', 'keypoint': None, 'key': 'SIT1-JNG-77-4-2025-04-1509-04-17'}
+[2025-07-15 09:56:41,140] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': None, 'output': None, 'rgb': 'D:/SIT_auto/SIT_deepethogram/DATA/SIT3-CV4-78-3-2025-04-1509-42-29\\SIT3-CV4-78-3-2025-04-1509-42-29.mp4', 'keypoint': None, 'key': 'SIT3-CV4-78-3-2025-04-1509-42-29'}
+[2025-07-15 09:58:29,262] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-15 10:00:01,116] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
+[2025-07-15 10:00:40,108] INFO [deepethogram.gui.main.get_selected_models:1136] {'flow_generator': {}, 'feature_extractor': {}, 'sequence': {'': None}}
+[2025-07-15 10:01:42,102] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-15 10:02:09,696] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
+[2025-07-15 10:03:09,698] INFO [deepethogram.gui.main.log_idle:151] User has been idle for 60.0 seconds...
+[2025-07-15 10:43:27,457] INFO [deepethogram.gui.main.user_did_something:138] User restarted labeling
+[2025-07-15 10:45:42,914] INFO [deepethogram.gui.main.initialize_video:226] Record for loaded video: {'flow': None, 'label': 'D:/SIT_auto/SIT_deepethogram/DATA/SIT1-JNG-77-4-2025-04-1509-04-17\\SIT1-JNG-77-4-2025-04-1509-04-17_labels.csv', 'output': None, 'rgb': 'D:/SIT_auto/SIT_deepethogram/DATA/SIT1-JNG-77-4-2025-04-1509-04-17\\SIT1-JNG-77-4-2025-04-1509-04-17.mp4', 'keypoint': None, 'key': 'SIT1-JNG-77-4-2025-04-1509-04-17'}
+[2025-07-15 10:48:18,125] INFO [deepethogram.gui.main.initialize_project:1017] cwd: D:\SIT_auto\SIT_deepethogram\gui_logs\250715_094033
+[2025-07-15 10:48:18,126] INFO [deepethogram.projects.convert_config_paths_to_absolute:1137] cwd in absolute: D:\SIT_auto\SIT_deepethogram\gui_logs\250715_094033
+[2025-07-15 10:48:18,126] INFO [deepethogram.projects.convert_config_paths_to_absolute:1180] after absolute: {'class_names': ['background', 'Contactbyhost', 'Contactbyvisitor', 'Followbyhost', 'Followbyvisitor', 'Pawcontrol(host)', 'Rearing', 'Tailrattling', 'Grooming'], 'config_file': 'D:\\SIT_auto\\SIT_deepethogram\\project_config.yaml', 'data_path': 'D:\\SIT_auto\\SIT_deepethogram\\DATA', 'labeler': None, 'model_path': 'D:\\SIT_auto\\SIT_deepethogram\\models', 'name': 'SIT', 'path': 'D:\\SIT_auto\\SIT_deepethogram', 'pretrained_path': 'D:\\SIT_auto\\SIT_deepethogram\\models\\pretrained_models'}
+[2025-07-15 10:48:18,127] INFO [deepethogram.gui.main.initialize_project:1019] cwd: D:\SIT_auto\SIT_deepethogram\gui_logs\250715_094033

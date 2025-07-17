@@ -1,0 +1,22 @@
+flow:
+  all: []
+  default: []
+key: SIT1-JNG-77-4-2025-04-1509-04-17
+keypoint:
+  all: []
+  default: []
+label:
+  all:
+  - SIT1-JNG-77-4-2025-04-1509-04-17_labels.csv
+  default: SIT1-JNG-77-4-2025-04-1509-04-17_labels.csv
+output:
+  all: []
+  default: []
+rgb:
+  all:
+  - SIT1-JNG-77-4-2025-04-1509-04-17.mp4
+  default: SIT1-JNG-77-4-2025-04-1509-04-17.mp4
+stats:
+  all:
+  - stats.yaml
+  default: stats.yaml

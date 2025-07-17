@@ -1,0 +1,83 @@
+augs:
+  LR: 0.5
+  UD: 0.0
+  brightness: 0.25
+  contrast: 0.1
+  crop_size: null
+  degrees: 10
+  grayscale: 0.5
+  hue: 0.1
+  normalization:
+    N: 134573787500
+    mean:
+    - 0.4188662543741402
+    - 0.384645660879449
+    - 0.3572427996897448
+    std:
+    - 0.18899837086842783
+    - 0.1915122234643136
+    - 0.19592325647909137
+  pad: null
+  random_resize: false
+  resize:
+  - 224
+  - 224
+  saturation: 0.1
+cmap: deepethogram
+compute:
+  batch_size: 32
+  dali: false
+  distributed: false
+  fp16: false
+  gpu_id: 0
+  max_batch_size: 512
+  metrics_workers: 0
+  min_batch_size: 8
+  num_workers: 8
+control_arrow_jump: 31
+label_view_width: 31
+log:
+  level: info
+notes: null
+postprocessor:
+  min_bout_length: 1
+  type: min_bout_per_behavior
+prediction_opacity: 0.2
+project:
+  class_names:
+  - background
+  - Contactbyhost
+  - Contactbyvisitor
+  - Followbyhost
+  - Followbyvisitor
+  - Pawcontrol(host)
+  - Rearing
+  - Tailrattling
+  - Grooming
+  config_file: D:\SIT_auto\SIT_deepethogram\project_config.yaml
+  data_path: D:\SIT_auto\SIT_deepethogram\DATA
+  labeler: null
+  model_path: D:\SIT_auto\SIT_deepethogram\models
+  name: SIT
+  path: D:\SIT_auto\SIT_deepethogram
+  pretrained_path: D:\SIT_auto\SIT_deepethogram\models\pretrained_models
+reload:
+  latest: false
+  overwrite_cfg: false
+run:
+  dir: D:\SIT_auto\SIT_deepethogram\gui_logs\250715_104818
+  model: null
+  type: gui
+sequence:
+  filter_length: 15
+split:
+  file: null
+  reload: true
+  train_val_test:
+  - 0.8
+  - 0.2
+  - 0.0
+train:
+  loss_weight_exp: 1.0
+unlabeled_alpha: 0.1
+vertical_arrow_jump: 3

@@ -1,0 +1,21 @@
+flow:
+  all: []
+  default: []
+key: SIT15-DOA-77-3-2025-04-1610-03-51
+keypoint:
+  all: []
+  default: []
+label:
+  all: []
+  default: []
+output:
+  all: []
+  default: []
+rgb:
+  all:
+  - SIT15-DOA-77-3-2025-04-1610-03-51.mp4
+  default: SIT15-DOA-77-3-2025-04-1610-03-51.mp4
+stats:
+  all:
+  - stats.yaml
+  default: stats.yaml

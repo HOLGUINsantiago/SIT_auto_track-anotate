@@ -1,0 +1,11 @@
+*.csv
+*.mp4
+*.mkv
+*.pt
+*.ckpt
+*.h5
+*.tiff
+.vscode
+.RData
+.Rhistory
+__pycache__

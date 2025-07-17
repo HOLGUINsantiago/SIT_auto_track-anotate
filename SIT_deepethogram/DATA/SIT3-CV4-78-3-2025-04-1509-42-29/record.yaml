@@ -1,0 +1,21 @@
+flow:
+  all: []
+  default: []
+key: SIT3-CV4-78-3-2025-04-1509-42-29
+keypoint:
+  all: []
+  default: []
+label:
+  all: []
+  default: []
+output:
+  all: []
+  default: []
+rgb:
+  all:
+  - SIT3-CV4-78-3-2025-04-1509-42-29.mp4
+  default: SIT3-CV4-78-3-2025-04-1509-42-29.mp4
+stats:
+  all:
+  - stats.yaml
+  default: stats.yaml

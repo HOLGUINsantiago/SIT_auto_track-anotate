@@ -1,0 +1,94 @@
+LR: 0.5
+UD: 0.0
+batch_size: 16
+brightness: 0.25
+classifier: resnet18
+config_file: null
+contrast: 0.1
+crop_size: !!python/tuple
+- 256
+- 256
+dali: true
+data_dir: /media/jim/FASTER/kinetics700
+dataset: kinetics
+degrees: 10
+distributed: false
+early_stopping_begins: null
+final_activation: softmax
+flow_generator: MotionNet
+flow_loss: MotionNet
+flow_max: 5
+fp16: false
+gpu_id: 1
+input_images: 11
+inputs: rgb
+lr: 0.0001
+milestones:
+- 50
+- 100
+- 150
+- 200
+- 250
+- 300
+min_lr: 5.0e-07
+model: flow_generator
+model_dir: models
+name: kinetics
+normalization:
+  flow:
+    N: 2097152000000
+    mean: null
+    std: null
+  rgb:
+    N: 209715200000
+    mean:
+    - 0.4345759153366089
+    - 0.39914101362228394
+    - 0.37257176637649536
+    std:
+    - 0.2809292674064636
+    - 0.27423909306526184
+    - 0.27391594648361206
+notes: dali_only_3_resolutions
+num_epochs: 1000
+num_flows: null
+num_rgb: 11
+num_workers: 8
+pad: null
+patience: 10
+preset: null
+project_dir: null
+random_resize: false
+reduction_factor: !!python/object/apply:numpy.core.multiarray.scalar
+- !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  D0lIYhM91D8=
+reload_split: true
+resize: null
+scheduler: plateau
+should_overwrite_args: false
+should_viz: true
+splitfile: null
+steps_per_epoch: 1000
+steps_per_test_epoch: 20
+steps_per_validation_epoch: 1000
+stopping_type: plateau
+train_val_test_split:
+- 0.8
+- 0.2
+- 0.0
+weight_loss: true
+weights: null

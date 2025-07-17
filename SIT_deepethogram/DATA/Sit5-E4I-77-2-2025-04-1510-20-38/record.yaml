@@ -1,0 +1,22 @@
+flow:
+  all: []
+  default: []
+key: Sit5-E4I-77-2-2025-04-1510-20-38
+keypoint:
+  all: []
+  default: []
+label:
+  all:
+  - Sit5-E4I-77-2-2025-04-1510-20-38_labels.csv
+  default: Sit5-E4I-77-2-2025-04-1510-20-38_labels.csv
+output:
+  all: []
+  default: []
+rgb:
+  all:
+  - Sit5-E4I-77-2-2025-04-1510-20-38.mp4
+  default: Sit5-E4I-77-2-2025-04-1510-20-38.mp4
+stats:
+  all:
+  - stats.yaml
+  default: stats.yaml

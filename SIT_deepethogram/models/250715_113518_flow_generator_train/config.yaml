@@ -1,0 +1,119 @@
+augs:
+  LR: 0.5
+  UD: 0.0
+  brightness: 0.25
+  color_p: 0.5
+  contrast: 0.1
+  crop_size: null
+  dali: false
+  degrees: 10
+  grayscale: 0.5
+  hue: 0.1
+  normalization:
+    N: 134573787500
+    mean:
+    - 0.4188662543741402
+    - 0.384645660879449
+    - 0.3572427996897448
+    std:
+    - 0.18899837086842783
+    - 0.1915122234643136
+    - 0.19592325647909137
+  pad: null
+  random_resize: false
+  resize:
+  - 224
+  - 224
+  saturation: 0.1
+compute:
+  batch_size: 32
+  dali: false
+  distributed: false
+  fp16: false
+  gpu_id: 0
+  max_batch_size: 512
+  metrics_workers: 0
+  min_batch_size: 8
+  num_workers: 4
+flow_generator:
+  arch: TinyMotionNet
+  flow_loss: MotionNet
+  flow_max: 10
+  flow_sparsity: false
+  input_images: 11
+  loss: MotionNet
+  max: 5
+  n_rgb: 11
+  smooth_weight_multiplier: 1.0
+  sparsity_weight: 0.0
+  type: flow_generator
+  weights: pretrained
+log:
+  level: info
+notes: null
+project:
+  class_names:
+  - background
+  - Contactbyhost
+  - Contactbyvisitor
+  - Followbyhost
+  - Followbyvisitor
+  - Pawcontrol(host)
+  - Rearing
+  - Tailrattling
+  - Grooming
+  config_file: D:\SIT_auto\SIT_deepethogram\project_config.yaml
+  data_path: D:\SIT_auto\SIT_deepethogram\DATA
+  labeler: null
+  model_path: D:\SIT_auto\SIT_deepethogram\models
+  name: SIT
+  path: D:\SIT_auto\SIT_deepethogram
+  pretrained_path: D:\SIT_auto\SIT_deepethogram\models\pretrained_models
+reload:
+  latest: false
+  overwrite_cfg: false
+  weights: D:\SIT_auto\SIT_deepethogram\models\pretrained_models\200221_115158_TinyMotionNet\checkpoint.pt
+run:
+  dir: D:\SIT_auto\SIT_deepethogram\models\250715_113518_flow_generator_train
+  model: flow_generator
+  type: train
+sequence:
+  filter_length: 15
+split:
+  file: null
+  reload: true
+  train_val_test:
+  - 0.8
+  - 0.2
+  - 0.0
+train:
+  early_stopping_begins: 0
+  label_smoothing: 0.05
+  loss_gamma: 1.0
+  loss_weight_exp: 1.0
+  lr: 0.0001
+  milestones:
+  - 50
+  - 100
+  - 150
+  - 200
+  - 250
+  - 300
+  min_lr: 5.0e-07
+  num_epochs: 10
+  oversampling_exp: 0.0
+  patience: 3
+  reduction_factor: 0.1
+  regularization:
+    alpha: 1.0e-05
+    beta: 0.001
+    style: l2_sp
+  scheduler: plateau
+  steps_per_epoch:
+    test: 20
+    train: 1000
+    val: 200
+  stopping_type: learning_rate
+  viz_examples: 10
+  viz_metrics: true
+  weight_loss: true

@@ -1,0 +1,169 @@
+[2025-07-15 14:06:11,946] INFO [__main__.feature_extractor_inference:473] args: C:\Users\TeamGranon\anaconda3\envs\deg_solo\lib\site-packages\deepethogram\feature_extractor\inference.py project.path=D:\SIT_auto\SIT_deepethogram inference.overwrite=True feature_extractor.weights=D:\SIT_auto\SIT_deepethogram\models\250715_124246_feature_extractor_train\lightning_checkpoints\epoch=13-step=8283.ckpt flow_generator.weights=D:\SIT_auto\SIT_deepethogram\models\250715_120117_flow_generator_train\lightning_checkpoints\epoch=1-step=1999.ckpt inference.directory_list=[D:\SIT_auto\SIT_deepethogram\DATA\SIT1-JNG-77-4-2025-04-1509-04-17,D:\SIT_auto\SIT_deepethogram\DATA\SIT13-KU2-78-3-2025-04-1609-26-39,D:\SIT_auto\SIT_deepethogram\DATA\SIT15-DOA-77-3-2025-04-1610-03-51,D:\SIT_auto\SIT_deepethogram\DATA\SIT17-BQ9-78-2-2025-04-1610-40-34,D:\SIT_auto\SIT_deepethogram\DATA\SIT19-6VT-77-1-2025-04-1611-17-34,D:\SIT_auto\SIT_deepethogram\DATA\SIT20-KUS-80-3-2025-04-1708-49-12,D:\SIT_auto\SIT_deepethogram\DATA\SIT22-TKX-80-5-2025-04-1709-27-09,D:\SIT_auto\SIT_deepethogram\DATA\SIT24-XBE-79-2-2025-04-1710-03-11,D:\SIT_auto\SIT_deepethogram\DATA\SIT26-69B-80-1-2025-04-1710-41-04,D:\SIT_auto\SIT_deepethogram\DATA\SIT3-CV4-78-3-2025-04-1509-42-29,D:\SIT_auto\SIT_deepethogram\DATA\SIT7-H38-78-2-2025-04-1511-01-21,D:\SIT_auto\SIT_deepethogram\DATA\SIT9-J1S-77-1-2025-04-1511-40-13,D:\SIT_auto\SIT_deepethogram\DATA\Sit11-CJ6-78-1-2025-04-1608-48-16,D:\SIT_auto\SIT_deepethogram\DATA\Sit5-E4I-77-2-2025-04-1510-20-38]
+[2025-07-15 14:06:11,946] INFO [__main__.feature_extractor_inference:475] configuration used in inference: 
+[2025-07-15 14:06:11,961] INFO [__main__.feature_extractor_inference:476] split:
+  reload: true
+  file: null
+  train_val_test:
+  - 0.8
+  - 0.2
+  - 0.0
+compute:
+  fp16: false
+  num_workers: 3
+  batch_size: 8
+  min_batch_size: 8
+  max_batch_size: 512
+  distributed: false
+  gpu_id: 0
+  dali: false
+  metrics_workers: 0
+reload:
+  overwrite_cfg: false
+  latest: false
+notes: null
+log:
+  level: info
+augs:
+  brightness: 0.25
+  contrast: 0.1
+  hue: 0.1
+  saturation: 0.1
+  color_p: 0.5
+  grayscale: 0.5
+  crop_size: null
+  resize:
+  - 224
+  - 224
+  dali: false
+  random_resize: false
+  pad: null
+  LR: 0.5
+  UD: 0.0
+  degrees: 10
+  normalization:
+    'N': 134573787500
+    mean:
+    - 0.4188662543741402
+    - 0.384645660879449
+    - 0.3572427996897448
+    std:
+    - 0.18899837086842783
+    - 0.1915122234643136
+    - 0.19592325647909137
+feature_extractor:
+  arch: resnet18
+  fusion: average
+  sampler: null
+  final_bn: false
+  sampling_ratio: null
+  final_activation: sigmoid
+  dropout_p: 0.25
+  n_flows: 10
+  n_rgb: 1
+  curriculum: false
+  inputs: both
+  weights: D:\SIT_auto\SIT_deepethogram\models\250715_124246_feature_extractor_train\lightning_checkpoints\epoch=13-step=8283.ckpt
+train:
+  steps_per_epoch:
+    train: 1000
+    val: 200
+    test: 20
+  num_epochs: 10
+  loss_weight_exp: 1.0
+flow_generator:
+  type: flow_generator
+  flow_loss: MotionNet
+  flow_max: 10
+  input_images: 11
+  flow_sparsity: false
+  smooth_weight_multiplier: 1.0
+  sparsity_weight: 0.0
+  loss: MotionNet
+  max: 5
+  n_rgb: 11
+  arch: TinyMotionNet
+  weights: D:\SIT_auto\SIT_deepethogram\models\250715_120117_flow_generator_train\lightning_checkpoints\epoch=1-step=1999.ckpt
+inference:
+  directory_list:
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT1-JNG-77-4-2025-04-1509-04-17
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT13-KU2-78-3-2025-04-1609-26-39
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT15-DOA-77-3-2025-04-1610-03-51
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT17-BQ9-78-2-2025-04-1610-40-34
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT19-6VT-77-1-2025-04-1611-17-34
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT20-KUS-80-3-2025-04-1708-49-12
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT22-TKX-80-5-2025-04-1709-27-09
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT24-XBE-79-2-2025-04-1710-03-11
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT26-69B-80-1-2025-04-1710-41-04
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT3-CV4-78-3-2025-04-1509-42-29
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT7-H38-78-2-2025-04-1511-01-21
+  - D:\SIT_auto\SIT_deepethogram\DATA\SIT9-J1S-77-1-2025-04-1511-40-13
+  - D:\SIT_auto\SIT_deepethogram\DATA\Sit11-CJ6-78-1-2025-04-1608-48-16
+  - D:\SIT_auto\SIT_deepethogram\DATA\Sit5-E4I-77-2-2025-04-1510-20-38
+  ignore_error: true
+  overwrite: true
+  use_loaded_model_cfg: true
+postprocessor:
+  type: min_bout_per_behavior
+  min_bout_length: 1
+project:
+  class_names:
+  - background
+  - Contactbyhost
+  - Contactbyvisitor
+  - Followbyhost
+  - Followbyvisitor
+  - Pawcontrol(host)
+  - Rearing
+  - Tailrattling
+  - Grooming
+  config_file: D:\SIT_auto\SIT_deepethogram\project_config.yaml
+  data_path: D:\SIT_auto\SIT_deepethogram\DATA
+  labeler: null
+  model_path: D:\SIT_auto\SIT_deepethogram\models
+  name: SIT
+  path: D:\SIT_auto\SIT_deepethogram
+  pretrained_path: D:\SIT_auto\SIT_deepethogram\models\pretrained_models
+sequence:
+  filter_length: 15
+run:
+  type: inference
+  model: feature_extractor
+  dir: D:\SIT_auto\SIT_deepethogram\models\250715_140611_feature_extractor_inference
+
+[2025-07-15 14:06:11,965] INFO [__main__.feature_extractor_inference:481] Latent name used in HDF5 file: resnet18
+[2025-07-15 14:06:11,976] INFO [deepethogram.data.augs.get_gpu_transforms:246] GPU transforms: {'train': Sequential(
+  (0): ToFloat()
+  (1): VideoSequential(
+    (RandomHorizontalFlip_0): RandomHorizontalFlip(p=0.5, p_batch=1.0, same_on_batch=False)
+    (RandomRotation_1): RandomRotation(degrees=10, p=0.5, p_batch=1.0, same_on_batch=False, resample=bilinear, align_corners=True)
+    (ColorJitter_2): ColorJitter(brightness=0.25, contrast=0.1, saturation=0.1, hue=0.1, p=0.5, p_batch=1.0, same_on_batch=False)
+    (RandomGrayscale_3): RandomGrayscale(p=0.5, p_batch=1.0, same_on_batch=False)
+  )
+  (2): NormalizeVideo()
+  (3): StackClipInChannels()
+), 'val': Sequential(
+  (0): ToFloat()
+  (1): NormalizeVideo()
+  (2): StackClipInChannels()
+), 'test': Sequential(
+  (0): ToFloat()
+  (1): NormalizeVideo()
+  (2): StackClipInChannels()
+), 'denormalize': Sequential(
+  (0): UnstackClip()
+  (1): DenormalizeVideo()
+)}
+[2025-07-15 14:06:11,977] INFO [__main__.feature_extractor_inference:517] gpu_transform: Sequential(
+  (0): ToFloat()
+  (1): NormalizeVideo()
+  (2): StackClipInChannels()
+)
+[2025-07-15 14:06:12,044] INFO [deepethogram.projects.get_weightfile_from_cfg:1081] loading specified weights: D:\SIT_auto\SIT_deepethogram\models\250715_124246_feature_extractor_train\lightning_checkpoints\epoch=13-step=8283.ckpt
+[2025-07-15 14:06:12,128] INFO [deepethogram.projects.get_weightfile_from_cfg:1081] loading specified weights: D:\SIT_auto\SIT_deepethogram\models\250715_124246_feature_extractor_train\lightning_checkpoints\epoch=13-step=8283.ckpt
+[2025-07-15 14:06:12,128] INFO [deepethogram.feature_extractor.train.build_model_from_cfg:220] feature extractor weightfile: D:\SIT_auto\SIT_deepethogram\models\250715_124246_feature_extractor_train\lightning_checkpoints\epoch=13-step=8283.ckpt
+[2025-07-15 14:06:12,192] INFO [deepethogram.utils.load_feature_extractor_components:630] loading component spatial from file D:\SIT_auto\SIT_deepethogram\models\250715_124246_feature_extractor_train\lightning_checkpoints\epoch=13-step=8283.ckpt
+[2025-07-15 14:06:12,313] INFO [deepethogram.utils.load_feature_extractor_components:630] loading component flow from file D:\SIT_auto\SIT_deepethogram\models\250715_124246_feature_extractor_train\lightning_checkpoints\epoch=13-step=8283.ckpt
+[2025-07-15 14:06:12,453] INFO [deepethogram.projects.get_weightfile_from_cfg:1081] loading specified weights: D:\SIT_auto\SIT_deepethogram\models\250715_120117_flow_generator_train\lightning_checkpoints\epoch=1-step=1999.ckpt
+[2025-07-15 14:06:12,453] INFO [deepethogram.utils.load_state:341] loading from checkpoint file D:\SIT_auto\SIT_deepethogram\models\250715_120117_flow_generator_train\lightning_checkpoints\epoch=1-step=1999.ckpt...
+[2025-07-15 14:06:12,469] INFO [deepethogram.utils.load_feature_extractor_components:630] loading component fusion from file D:\SIT_auto\SIT_deepethogram\models\250715_124246_feature_extractor_train\lightning_checkpoints\epoch=13-step=8283.ckpt
+[2025-07-15 14:06:12,539] INFO [__main__.feature_extractor_inference:547] best epoch from loaded file: 13

@@ -1,0 +1,679 @@
+{
+    "data": {
+        "labels": {
+            "training_labels": "D:/Stage_VAEVE_2025/SIT/SLEAP/labels.v001.slp",
+            "validation_labels": null,
+            "validation_fraction": 0.1,
+            "test_labels": null,
+            "split_by_inds": false,
+            "training_inds": [
+                73,
+                104,
+                161,
+                109,
+                186,
+                72,
+                309,
+                46,
+                167,
+                184,
+                271,
+                227,
+                159,
+                27,
+                136,
+                180,
+                126,
+                232,
+                56,
+                247,
+                4,
+                269,
+                172,
+                253,
+                74,
+                146,
+                121,
+                255,
+                240,
+                215,
+                8,
+                314,
+                84,
+                297,
+                209,
+                123,
+                107,
+                96,
+                145,
+                274,
+                214,
+                149,
+                193,
+                259,
+                203,
+                191,
+                76,
+                79,
+                179,
+                59,
+                289,
+                207,
+                15,
+                49,
+                42,
+                208,
+                178,
+                11,
+                310,
+                45,
+                60,
+                110,
+                116,
+                155,
+                192,
+                294,
+                302,
+                78,
+                14,
+                312,
+                157,
+                31,
+                143,
+                156,
+                87,
+                20,
+                190,
+                206,
+                242,
+                97,
+                71,
+                201,
+                282,
+                51,
+                244,
+                263,
+                301,
+                88,
+                303,
+                103,
+                2,
+                135,
+                40,
+                12,
+                144,
+                50,
+                82,
+                223,
+                85,
+                235,
+                95,
+                25,
+                171,
+                34,
+                100,
+                307,
+                132,
+                111,
+                128,
+                251,
+                48,
+                304,
+                217,
+                238,
+                216,
+                118,
+                55,
+                13,
+                202,
+                61,
+                183,
+                224,
+                279,
+                140,
+                147,
+                102,
+                187,
+                293,
+                246,
+                67,
+                35,
+                151,
+                318,
+                164,
+                106,
+                83,
+                124,
+                197,
+                295,
+                252,
+                204,
+                92,
+                150,
+                284,
+                69,
+                114,
+                18,
+                37,
+                16,
+                139,
+                205,
+                115,
+                57,
+                198,
+                134,
+                32,
+                290,
+                317,
+                0,
+                299,
+                120,
+                200,
+                280,
+                245,
+                36,
+                148,
+                65,
+                52,
+                53,
+                230,
+                64,
+                152,
+                218,
+                266,
+                239,
+                141,
+                137,
+                5,
+                138,
+                113,
+                286,
+                28,
+                10,
+                194,
+                93,
+                195,
+                29,
+                213,
+                228,
+                3,
+                220,
+                44,
+                169,
+                221,
+                38,
+                30,
+                283,
+                75,
+                70,
+                94,
+                249,
+                313,
+                23,
+                21,
+                189,
+                90,
+                241,
+                47,
+                298,
+                122,
+                24,
+                77,
+                276,
+                127,
+                1,
+                237,
+                278,
+                185,
+                222,
+                170,
+                243,
+                320,
+                199,
+                225,
+                7,
+                291,
+                117,
+                315,
+                33,
+                39,
+                133,
+                62,
+                163,
+                99,
+                176,
+                257,
+                168,
+                210,
+                162,
+                258,
+                234,
+                63,
+                160,
+                182,
+                188,
+                212,
+                311,
+                296,
+                275,
+                22,
+                319,
+                256,
+                308,
+                250,
+                229,
+                273,
+                277,
+                264,
+                270,
+                158,
+                9,
+                142,
+                153,
+                196,
+                105,
+                86,
+                125,
+                281,
+                177,
+                165,
+                248,
+                267,
+                306,
+                26,
+                268,
+                19,
+                41,
+                58,
+                54,
+                226,
+                43,
+                119,
+                175,
+                233,
+                154,
+                81,
+                236,
+                173,
+                181,
+                129
+            ],
+            "validation_inds": [
+                272,
+                6,
+                89,
+                166,
+                254,
+                305,
+                17,
+                260,
+                219,
+                174,
+                131,
+                112,
+                316,
+                265,
+                101,
+                262,
+                98,
+                130,
+                288,
+                287,
+                261,
+                231,
+                68,
+                321,
+                285,
+                91,
+                292,
+                66,
+                80,
+                300,
+                211,
+                108
+            ],
+            "test_inds": null,
+            "search_path_hints": [
+                "",
+                ""
+            ],
+            "skeletons": [
+                {
+                    "directed": true,
+                    "graph": {
+                        "name": "Skeleton-1",
+                        "num_edges_inserted": 7
+                    },
+                    "links": [
+                        {
+                            "edge_insert_idx": 0,
+                            "key": 0,
+                            "source": {
+                                "py/object": "sleap.skeleton.Node",
+                                "py/state": {
+                                    "py/tuple": [
+                                        "nose",
+                                        1.0
+                                    ]
+                                }
+                            },
+                            "target": {
+                                "py/object": "sleap.skeleton.Node",
+                                "py/state": {
+                                    "py/tuple": [
+                                        "ear_left",
+                                        1.0
+                                    ]
+                                }
+                            },
+                            "type": {
+                                "py/reduce": [
+                                    {
+                                        "py/type": "sleap.skeleton.EdgeType"
+                                    },
+                                    {
+                                        "py/tuple": [
+                                            1
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "edge_insert_idx": 1,
+                            "key": 0,
+                            "source": {
+                                "py/id": 1
+                            },
+                            "target": {
+                                "py/object": "sleap.skeleton.Node",
+                                "py/state": {
+                                    "py/tuple": [
+                                        "ear_right",
+                                        1.0
+                                    ]
+                                }
+                            },
+                            "type": {
+                                "py/id": 3
+                            }
+                        },
+                        {
+                            "edge_insert_idx": 2,
+                            "key": 0,
+                            "source": {
+                                "py/id": 1
+                            },
+                            "target": {
+                                "py/object": "sleap.skeleton.Node",
+                                "py/state": {
+                                    "py/tuple": [
+                                        "neck",
+                                        1.0
+                                    ]
+                                }
+                            },
+                            "type": {
+                                "py/id": 3
+                            }
+                        },
+                        {
+                            "edge_insert_idx": 3,
+                            "key": 0,
+                            "source": {
+                                "py/id": 2
+                            },
+                            "target": {
+                                "py/id": 5
+                            },
+                            "type": {
+                                "py/id": 3
+                            }
+                        },
+                        {
+                            "edge_insert_idx": 4,
+                            "key": 0,
+                            "source": {
+                                "py/id": 4
+                            },
+                            "target": {
+                                "py/id": 5
+                            },
+                            "type": {
+                                "py/id": 3
+                            }
+                        },
+                        {
+                            "edge_insert_idx": 5,
+                            "key": 0,
+                            "source": {
+                                "py/id": 5
+                            },
+                            "target": {
+                                "py/object": "sleap.skeleton.Node",
+                                "py/state": {
+                                    "py/tuple": [
+                                        "back",
+                                        1.0
+                                    ]
+                                }
+                            },
+                            "type": {
+                                "py/id": 3
+                            }
+                        },
+                        {
+                            "edge_insert_idx": 6,
+                            "key": 0,
+                            "source": {
+                                "py/id": 6
+                            },
+                            "target": {
+                                "py/object": "sleap.skeleton.Node",
+                                "py/state": {
+                                    "py/tuple": [
+                                        "tail_tip",
+                                        1.0
+                                    ]
+                                }
+                            },
+                            "type": {
+                                "py/id": 3
+                            }
+                        }
+                    ],
+                    "multigraph": true,
+                    "nodes": [
+                        {
+                            "id": {
+                                "py/id": 1
+                            }
+                        },
+                        {
+                            "id": {
+                                "py/id": 2
+                            }
+                        },
+                        {
+                            "id": {
+                                "py/id": 4
+                            }
+                        },
+                        {
+                            "id": {
+                                "py/id": 5
+                            }
+                        },
+                        {
+                            "id": {
+                                "py/id": 6
+                            }
+                        },
+                        {
+                            "id": {
+                                "py/id": 7
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "preprocessing": {
+            "ensure_rgb": true,
+            "ensure_grayscale": false,
+            "imagenet_mode": null,
+            "input_scaling": 1.0,
+            "pad_to_stride": 1,
+            "resize_and_pad_to_target": true,
+            "target_height": 720,
+            "target_width": 1280
+        },
+        "instance_cropping": {
+            "center_on_part": "back",
+            "crop_size": 96,
+            "crop_size_detection_padding": 16
+        }
+    },
+    "model": {
+        "backbone": {
+            "leap": null,
+            "unet": {
+                "stem_stride": null,
+                "max_stride": 16,
+                "output_stride": 4,
+                "filters": 24,
+                "filters_rate": 2.0,
+                "middle_block": true,
+                "up_interpolate": true,
+                "stacks": 1
+            },
+            "hourglass": null,
+            "resnet": null,
+            "pretrained_encoder": null
+        },
+        "heads": {
+            "single_instance": null,
+            "centroid": null,
+            "centered_instance": {
+                "anchor_part": "back",
+                "part_names": [
+                    "nose",
+                    "ear_left",
+                    "ear_right",
+                    "neck",
+                    "back",
+                    "tail_tip"
+                ],
+                "sigma": 2.5,
+                "output_stride": 4,
+                "loss_weight": 1.0,
+                "offset_refinement": false
+            },
+            "multi_instance": null,
+            "multi_class_bottomup": null,
+            "multi_class_topdown": null
+        },
+        "base_checkpoint": null
+    },
+    "optimization": {
+        "preload_data": true,
+        "augmentation_config": {
+            "rotate": true,
+            "rotation_min_angle": -15.0,
+            "rotation_max_angle": 15.0,
+            "translate": false,
+            "translate_min": -5,
+            "translate_max": 5,
+            "scale": false,
+            "scale_min": 0.9,
+            "scale_max": 1.1,
+            "uniform_noise": false,
+            "uniform_noise_min_val": 0.0,
+            "uniform_noise_max_val": 10.0,
+            "gaussian_noise": false,
+            "gaussian_noise_mean": 5.0,
+            "gaussian_noise_stddev": 1.0,
+            "contrast": false,
+            "contrast_min_gamma": 0.5,
+            "contrast_max_gamma": 2.0,
+            "brightness": false,
+            "brightness_min_val": 0.0,
+            "brightness_max_val": 10.0,
+            "random_crop": false,
+            "random_crop_height": 256,
+            "random_crop_width": 256,
+            "random_flip": false,
+            "flip_horizontal": false
+        },
+        "online_shuffling": true,
+        "shuffle_buffer_size": 128,
+        "prefetch": true,
+        "batch_size": 4,
+        "batches_per_epoch": 200,
+        "min_batches_per_epoch": 200,
+        "val_batches_per_epoch": 10,
+        "min_val_batches_per_epoch": 10,
+        "epochs": 200,
+        "optimizer": "adam",
+        "initial_learning_rate": 0.0001,
+        "learning_rate_schedule": {
+            "reduce_on_plateau": true,
+            "reduction_factor": 0.5,
+            "plateau_min_delta": 1e-06,
+            "plateau_patience": 5,
+            "plateau_cooldown": 3,
+            "min_learning_rate": 1e-08
+        },
+        "hard_keypoint_mining": {
+            "online_mining": false,
+            "hard_to_easy_ratio": 2.0,
+            "min_hard_keypoints": 2,
+            "max_hard_keypoints": null,
+            "loss_scale": 5.0
+        },
+        "early_stopping": {
+            "stop_training_on_plateau": true,
+            "plateau_min_delta": 1e-08,
+            "plateau_patience": 10
+        }
+    },
+    "outputs": {
+        "save_outputs": true,
+        "run_name": "250627_120214.centered_instance.n=338",
+        "run_name_prefix": "",
+        "run_name_suffix": "",
+        "runs_folder": "D:/Stage_VAEVE_2025/SIT/SLEAP\\models",
+        "tags": [
+            ""
+        ],
+        "save_visualizations": true,
+        "delete_viz_images": true,
+        "zip_outputs": false,
+        "log_to_csv": true,
+        "checkpointing": {
+            "initial_model": false,
+            "best_model": true,
+            "every_epoch": false,
+            "latest_model": true,
+            "final_model": true
+        },
+        "tensorboard": {
+            "write_logs": false,
+            "loss_frequency": "epoch",
+            "architecture_graph": false,
+            "profile_graph": false,
+            "visualizations": true
+        },
+        "zmq": {
+            "subscribe_to_controller": true,
+            "controller_address": "tcp://127.0.0.1:9000",
+            "controller_polling_timeout": 10,
+            "publish_updates": true,
+            "publish_address": "tcp://127.0.0.1:9001"
+        }
+    },
+    "name": "",
+    "description": "",
+    "sleap_version": "1.4.1a2",
+    "filename": "D:/Stage_VAEVE_2025/SIT/SLEAP\\models\\250627_120214.centered_instance.n=338\\training_config.json"
+}
