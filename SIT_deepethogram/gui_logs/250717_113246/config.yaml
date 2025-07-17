@@ -65,7 +65,7 @@ reload:
   latest: false
   overwrite_cfg: false
 run:
-  dir: D:\SIT_auto\SIT_deepethogram\gui_logs\250717_112917
+  dir: D:\SIT_auto\SIT_deepethogram\gui_logs\250717_113246
   model: null
   type: gui
 sequence:

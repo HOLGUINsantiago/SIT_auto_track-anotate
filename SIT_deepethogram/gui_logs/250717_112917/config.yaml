@@ -8,15 +8,15 @@ augs:
   grayscale: 0.5
   hue: 0.1
   normalization:
-    N: 135801897500
+    N: 134573787500
     mean:
-    - 0.4198086977432194
-    - 0.38591966278319084
-    - 0.3583894929837394
+    - 0.4188662543741402
+    - 0.384645660879449
+    - 0.3572427996897448
     std:
-    - 0.18812246994180273
-    - 0.1906279735657266
-    - 0.19501479378598433
+    - 0.18899837086842783
+    - 0.1915122234643136
+    - 0.19592325647909137
   pad: null
   random_resize: false
   resize:
@@ -54,7 +54,7 @@ project:
   - Rearing
   - Tailrattling
   - Grooming
-  config_file: project_config.yaml
+  config_file: D:\SIT_auto\SIT_deepethogram\project_config.yaml
   data_path: D:\SIT_auto\SIT_deepethogram\DATA
   labeler: null
   model_path: D:\SIT_auto\SIT_deepethogram\models
